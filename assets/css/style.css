@@ -6,24 +6,25 @@
 	--fw-bold: 700;
 	--fw-black: 900;
 
-    --line-2: 0.2rem;
+	--line-2: 0.2rem;
+    --line-4: 1.25rem;
 
 	/* Dark mode */
-    /* page bg */
+	/* page bg */
 	--col-bg: #121212;
-    /* element bg */
+	/* element bg */
 	--col-surface: #1d1d1d;
-    /* one level up */
+	/* one level up */
 	--col-surface2: #2c2c2c;
-    /* primary colors */
+	/* primary colors */
 	--col-p-200: #fdf297;
 	--col-p-500: #fbe526;
 	--col-p-700: #f8ba18;
-    /* secondary colors */
+	/* secondary colors */
 	--col-s-200: #abc2cb;
 	--col-s-500: #5a8291;
 	--col-s-700: #3f5e6a;
-    /* text colors */
+	/* text colors */
 	--col-on-bg: #ffffff;
 	--col-on-surface: #ffffff;
 	--col-on-primary: #000000;
@@ -46,25 +47,25 @@ body {
 	color: var(--col-on-surface);
 }
 ::-webkit-scrollbar {
-    width: 0px;
-  }
+	width: 0px;
+}
 h1 {
-    font-size: 2.125rem;
+	font-size: 2.125rem;
 }
 h2 {
-    font-size: 1.875rem;
+	font-size: 1.875rem;
 }
 h3 {
-    font-size: 1.5rem;
+	font-size: 1.5rem;
 }
 h4 {
-    font-size: 1.25rem;
+	font-size: 1.25rem;
 }
 h5 {
-    font-size: 1.125rem;
+	font-size: 1.125rem;
 }
 h6 {
-    font-size: 1rem;
+	font-size: 1rem;
 }
 header {
 	display: flex;
@@ -82,8 +83,8 @@ header p {
 	display: flex;
 	position: relative;
 	background-color: var(--col-surface);
-	margin: 1rem;
-	border-radius: 6px;
+	margin: 2rem;
+	border-radius: 12px;
 }
 .type aside,
 .color aside {
@@ -96,8 +97,8 @@ header p {
 	font-weight: var(--fw-medium);
 	padding: 1rem;
 	font-size: 2rem;
-    text-align: right;
-    color: var(--col-s-200);
+	text-align: right;
+	color: var(--col-s-200);
 }
 .type-area {
 	padding: 1rem 2rem;
@@ -106,7 +107,8 @@ header p {
 	grid-template-areas:
 		"A"
 		"B"
-		"C";
+		"C"
+        ;
 }
 .title-area {
 	grid-area: A;
@@ -118,11 +120,11 @@ header p {
 	text-align: center;
 }
 .title-area p {
-    color: var(--col-s-700);
-    font-weight: var(--fw-regular);
-    font-size: 1.25rem;
-    text-align: center;
-    padding-bottom: 2rem;
+	color: var(--col-s-700);
+	font-weight: var(--fw-regular);
+	font-size: 1.25rem;
+	text-align: center;
+	padding-bottom: 2rem;
 }
 .weight {
 	grid-area: B;
@@ -132,9 +134,9 @@ header p {
 .weight figure {
 	border: var(--line-2) solid var(--col-surface2);
 	position: relative;
-    min-width: 124px;
+	min-width: 124px;
 	width: 16%;
-	border-radius: 4px;
+	border-radius: 6px;
 }
 .top {
 	border-bottom: var(--line-2) solid var(--col-surface2);
@@ -188,20 +190,20 @@ header p {
 .h1 > * {
 	margin: 0;
 	padding-top: 0.5rem;
-    color: var(--col-p-200);
+	color: var(--col-p-500);
 }
 .h1 > p {
-    padding: 0 0 0.5rem 0;
-    color: var(--col-p-700);
+	padding: 0 0 0.5rem 0;
+	color: var(--col-p-700);
 }
 .h6 > * {
 	margin: 0;
-	padding-top: 0.5rem; 
-    color: var(--col-p-200);  
+	padding-top: 0.5rem;
+	color: var(--col-p-500);
 }
 .h6 > p {
-    padding: 0 0 0.5rem 0;
-    color: var(--col-p-700);
+	padding: 0 0 0.5rem 0;
+	color: var(--col-p-700);
 }
 .h6 {
 	grid-area: D;
@@ -216,88 +218,158 @@ header p {
 	display: flex;
 	width: 100%;
 	padding: 2rem;
-    flex-direction: column;
-    margin: auto 0;
-    color: var(--col-p-200);
+	flex-direction: column;
+	margin: auto 0;
+	color: var(--col-p-200);
 }
 .type-second {
-    display: flex;
-    grid-area: C;
+	display: flex;
+	grid-area: C;
 }
 .color {
-    display: flex;
+	display: flex;
 	position: relative;
-    flex-direction: row;
+	flex-direction: row;
 	background-color: var(--col-surface);
-	margin: 1rem;
-	border-radius: 6px;
+	margin: 2rem;
+	border-radius: 12px;
 }
 .primary h2 {
-    color: var(--col-s-500)
+	color: var(--col-p-500);
 }
 .secondary h2 {
-    color: var(--col-s-500)
+	color: var(--col-s-500);
 }
 .neutrals h2 {
-    color: var(--col-s-500)
+	color: var(--col-on-surface);
 }
 .color-swatch {
-    padding: 1rem 2rem;
+	padding: 1rem 2rem;
 	display: grid;
 	width: 80%;
 	grid-template-areas:
 		"A"
 		"B"
-		"C";
+		"D"
+        "C";
 }
 .primary {
-    grid-area: A;
-    position: relative;
+	grid-area: A;
+	position: relative;
+    padding: 1rem 2rem;
 }
 .secondary {
-    grid-area: B;
-    position: relative;
+	grid-area: B;
+	position: relative;
+    padding: 1rem 2rem;
 }
 .neutrals {
-    grid-area: C;
-    position: relative;
+	grid-area: C;
+	position: relative;
+    padding: 1rem 2rem;
+}
+.background {
+    grid-area: D;
+	position: relative; 
+    padding: 1rem 2rem;
 }
 .primary-color {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+    flex-wrap: wrap;
 }
 .swatch {
-
+	border: var(--line-2) solid var(--col-surface2);
+	border-radius: 6px;
+    margin: 1rem;
+    max-width: 9rem;
+    min-width: 9rem;
+}
+.swatch figure {
+	padding: 1rem;
+}
+.swatch-inner {
+    width: 6rem;
+	height: 6rem;
+    border-radius: 4px;
+    margin: 0 auto;
 }
 #swatch1 {
-    width: 5rem;
-    height: 5rem;
-    background-color: var(--col-p-200);
-    border-radius: 4px;
+	background-color: var(--col-p-200);
 }
-.swatch-info {
-    
+#swatch2 {
+	background-color: var(--col-p-500);
 }
+#swatch3 {
+	background-color: var(--col-p-700);
+}
+#swatch4 {
+	background-color: var(--col-s-200);
+}
+#swatch5 {
+	background-color: var(--col-s-500);
+}
+#swatch6 {
+	background-color: var(--col-s-700);
+}
+#swatch7 {
+	background-color: var(--col-on-bg);
+    border: var(--line-4) solid var(--col-bg);
+}
+#swatch8 {
+	background-color: var(--col-on-surface);
+    border: var(--line-4) solid var(--col-surface);
+}
+#swatch9 {
+	background-color: var(--col-on-primary);
+    border: var(--line-4) solid var(--col-p-500);
+}
+#swatch10 {
+	background-color: var(--col-on-secondary);
+    border: var(--line-4) solid var(--col-s-500);
+}
+#swatch11 {
+	background-color: var(--col-bg);
+}
+#swatch12 {
+	background-color: var(--col-surface);
+    border: var(--line-2) solid var(--col-surface2);
+}
+#swatch13 {
+	background-color: var(--col-surface2);
+}
+.swatch-info h3 {
+	color: var(--col-on-surface);
+}
+.swatch-info h4 {
+	color: var(--col-on-surface);
+}
+
 
 
 
 
 
 @media screen and (max-width: 992px) {
-    .weight {
-        flex-wrap: wrap;
+	.weight {
+		flex-wrap: wrap;
+	}
+	.type-second {
+		flex-wrap: wrap;
+	}
+    .swatch-inner {
+        width: 4rem;
+        height: 4rem;
     }
-    .type-second {
-        flex-wrap: wrap;
-    }
+
 }
 @media screen and (max-width: 576px) {
-    .type {
-        flex-direction: column;
-        align-items: center;
-    }
-    .type aside {
-        width: 100%;
-    }
+	.type {
+		flex-direction: column;
+		align-items: center;
+	}
+	.type aside {
+		width: 100%;
+	}
 }
