@@ -1,5 +1,6 @@
 :root {
-	font-family: "Nunito", sans-serif;
+	font-family: 'Rubik', sans-serif;
+
 	--fw-light: 300;
 	--fw-regular: 400;
 	--fw-medium: 500;
@@ -11,19 +12,19 @@
 
 	/* Dark mode */
 	/* page bg */
-	--col-bg: #121212;
+	--col-bg: hsl(0, 0%, 8%);
 	/* element bg */
-	--col-surface: #1d1d1d;
+	--col-surface: hsl(0, 0%, 14%);
 	/* one level up */
-	--col-surface2: #2c2c2c;
+	--col-surface2: hsl(0, 0%, 22%);
 	/* primary colors */
-	--col-p-200: #fdf297;
-	--col-p-500: #fbe526;
-	--col-p-700: #f8ba18;
+	--col-s-200: #fdff58;
+	--col-s-500: #c6ff00;
+	--col-s-700: #90cc00;
 	/* secondary colors */
-	--col-s-200: #abc2cb;
-	--col-s-500: #5a8291;
-	--col-s-700: #3f5e6a;
+	--col-p-200: #e5ccff;
+	--col-p-500: #b19bff;
+	--col-p-700: #7f6dcb;
 	/* text colors */
 	--col-on-bg: #ffffff;
 	--col-on-surface: #ffffff;
@@ -134,8 +135,8 @@ header p {
 .weight figure {
 	border: var(--line-2) solid var(--col-surface2);
 	position: relative;
-	min-width: 124px;
-	width: 16%;
+	min-width: 140px;
+	width: 18%;
 	border-radius: 6px;
 }
 .top {
@@ -283,7 +284,7 @@ header p {
 	border: var(--line-2) solid var(--col-surface2);
 	border-radius: 6px;
     margin: 1rem;
-    max-width: 9rem;
+    max-width: 10rem;
     min-width: 9rem;
 }
 .swatch figure {
