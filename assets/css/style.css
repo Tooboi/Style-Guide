@@ -1,5 +1,6 @@
 :root {
-	font-family: 'Rubik', sans-serif;
+	--ff1: 'Oswald', sans-serif;
+	--ff2: 'Quicksand', sans-serif;
 
 	--fw-light: 300;
 	--fw-regular: 400;
@@ -12,24 +13,24 @@
 
 	/* Dark mode */
 	/* page bg */
-	--col-bg: hsl(0, 0%, 8%);
+	--col-bg: #1a1b26;
 	/* element bg */
-	--col-surface: hsl(0, 0%, 14%);
+	--col-surface: #24283b;
 	/* one level up */
-	--col-surface2: hsl(0, 0%, 22%);
+	--col-surface2: #414868;
 	/* primary colors */
-	--col-s-200: #fdff58;
-	--col-s-500: #c6ff00;
-	--col-s-700: #90cc00;
+	--col-p-200: #bb9af7;
+	--col-p-500: #9B9EF7;
+	--col-p-700: #7aa2f7;
 	/* secondary colors */
-	--col-p-200: #e5ccff;
-	--col-p-500: #b19bff;
-	--col-p-700: #7f6dcb;
+	--col-s-200: #b4f9f8;
+	--col-s-500: #73daca;
+	--col-s-700: #2ac3de;
 	/* text colors */
-	--col-on-bg: #ffffff;
-	--col-on-surface: #ffffff;
-	--col-on-primary: #000000;
-	--col-on-secondary: #000000;
+	--col-on-bg: #9aa5ce;
+	--col-on-surface: #a9b1d6;
+	--col-on-primary: #1a1b26;
+	--col-on-secondary: #1a1b26;
 
 	/* Light mode 
     --col-bg: #ffffff;
@@ -46,6 +47,7 @@
 body {
 	background-color: var(--col-bg);
 	color: var(--col-on-surface);
+	font-family: var(--ff2);
 }
 ::-webkit-scrollbar {
 	width: 0px;
@@ -73,8 +75,8 @@ header {
 	flex-direction: column;
 	position: relative;
 	padding: 1rem;
-	background-color: var(--col-p-700);
-	border-bottom: var(--line-2) solid var(--col-p-500);
+	background-color: var(--col-p-500);
+	border-bottom: var(--line-2) solid var(--col-p-700);
 }
 header h1,
 header p {
