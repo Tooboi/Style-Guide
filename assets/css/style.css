@@ -6,30 +6,47 @@
 	--fw-bold: 700;
 	--fw-black: 900;
 
-	--line-2: 0.2rem;
+	--line-2: 0.125rem;
     --line-4: 1.25rem;
 
 	/* Dark mode */
 	/* page bg */
-	--col-bg: #121212;
+	--col-bg: #1D2128;
 	/* element bg */
-	--col-surface: #1d1d1d;
+	--col-surface: #23272E;
 	/* one level up */
-	--col-surface2: #2c2c2c;
+	--col-surface2: #444C56;
 	/* primary colors */
-	--col-p-200: #fdf297;
-	--col-p-500: #fbe526;
-	--col-p-700: #f8ba18;
+	--col-p-200: #CDD9E5;
+	--col-p-500: #ADBAC7;
+	--col-p-700: #2D333B;
 	/* secondary colors */
-	--col-s-200: #abc2cb;
-	--col-s-500: #5a8291;
-	--col-s-700: #3f5e6a;
+	--col-s-200: #CDD9E5;
+	--col-s-500: #CDD9E5;
+	--col-s-700: #CDD9E5;
 	/* text colors */
-	--col-on-bg: #ffffff;
+	--col-on-bg: #CDD9E5;
+	--col-on-surface: #CDD9E5;
+	--col-on-primary: #CDD9E5;
+	--col-on-secondary: #CDD9E5;
+
+	/* --col-bg: hsl(176, 30%, 21%); */
+	/* element bg */
+	/* --col-surface: hsl(176, 38%, 31%); */
+	/* one level up */
+	/* --col-surface2: hsl(176, 30%, 41%);
+	--col-p-200: hsl(52, 71%, 87%);
+	--col-p-500: hsl(52, 71%, 67%);
+	--col-p-700: hsl(52, 65%, 60%); */
+	/* secondary colors */
+	/* --col-s-200: hsl(52, 71%, 87%);
+	--col-s-500: hsl(52, 71%, 67%);
+	--col-s-700: hsl(52, 65%, 60%); */
+	/* text colors */
+	/* --col-on-bg: #ffffff;
 	--col-on-surface: #ffffff;
 	--col-on-primary: #000000;
-	--col-on-secondary: #000000;
-
+	--col-on-secondary: #000000; */
 	/* Light mode 
     --col-bg: #ffffff;
     --col-surface: #ffffff;
@@ -41,6 +58,18 @@
     --col-on-surface: #000000;
     --col-on-primary: #ffffff;
     --col-on-secondary: #000000;*/
+
+	/* GitHub Theme */
+	/* Surface Colors */
+	--surface-0: #1D2128;
+	--surface-1: #23272E;
+	--surface-2: #2D333B;
+	/* Text colors */
+	--surface-8: #768390;
+	--surface-9: #ADBAC7;
+	--surface-10: #CDD9E5;
+	--border: #444C56;
+	
 }
 body {
 	background-color: var(--col-bg);
@@ -73,7 +102,7 @@ header {
 	position: relative;
 	padding: 1rem;
 	background-color: var(--col-p-700);
-	border-bottom: var(--line-2) solid var(--col-p-500);
+	/* border-bottom: var(--line-2) solid var(--col-p-500); */
 }
 header h1,
 header p {
@@ -85,6 +114,7 @@ header p {
 	background-color: var(--col-surface);
 	margin: 2rem;
 	border-radius: 12px;
+	border: var(--line-2) solid var(--border);
 }
 .type aside,
 .color aside {
@@ -233,6 +263,7 @@ header p {
 	background-color: var(--col-surface);
 	margin: 2rem;
 	border-radius: 12px;
+	border: var(--line-2) solid var(--border);
 }
 .primary h2 {
 	color: var(--col-p-500);
@@ -345,7 +376,11 @@ header p {
 .swatch-info h4 {
 	color: var(--col-on-surface);
 }
-
+.custom-btn {
+	color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
 
 
 
