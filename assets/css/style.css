@@ -1,6 +1,5 @@
 :root {
-	--ff1: 'Oswald', sans-serif;
-	--ff2: 'Quicksand', sans-serif;
+	--ff: "Nunito", sans-serif;
 
 	--fw-light: 300;
 	--fw-regular: 400;
@@ -8,46 +7,48 @@
 	--fw-bold: 700;
 	--fw-black: 900;
 
-	--line-2: 0.2rem;
+	--line-2: 0.125rem;
     --line-4: 1.25rem;
 
-	/* Dark mode */
-	/* page bg */
-	--col-bg: #1a1b26;
+
+	--col-bg: hsl(176, 30%, 21%);
 	/* element bg */
-	--col-surface: #24283b;
+	--col-surface: hsl(176, 38%, 31%);
 	/* one level up */
-	--col-surface2: #414868;
+	--col-surface2: hsl(176, 30%, 41%);
 	/* primary colors */
-	--col-p-200: #bb9af7;
-	--col-p-500: #9B9EF7;
-	--col-p-700: #7aa2f7;
+	--col-p-200: hsl(52, 71%, 87%);
+	--col-p-500: hsl(52, 71%, 67%);
+	--col-p-700: hsl(52, 65%, 60%);
 	/* secondary colors */
-	--col-s-200: #b4f9f8;
-	--col-s-500: #73daca;
-	--col-s-700: #2ac3de;
+	--col-s-200: hsl(52, 71%, 87%);
+	--col-s-500: hsl(52, 71%, 67%);
+	--col-s-700: hsl(52, 65%, 60%);
+
 	/* text colors */
 	--col-on-bg: #9aa5ce;
 	--col-on-surface: #a9b1d6;
 	--col-on-primary: #1a1b26;
 	--col-on-secondary: #1a1b26;
 
-	/* Light mode 
-    --col-bg: #ffffff;
-    --col-surface: #ffffff;
-    --col-p: #fbe526;
-    --col-pv: #f8ba18;
-    --col-s: #abc2cb;
-    --col-sv: #3f5e6a;
-    --col-on-bg: #000000;
-    --col-on-surface: #000000;
-    --col-on-primary: #ffffff;
-    --col-on-secondary: #000000;*/
+	/* GitHub Theme */
+	/* Surface Colors */
+	/* --surface-0: #1D2128;
+	--surface-1: #23272E;
+	--surface-2: #2D333B; */
+	/* Text colors */
+	/* --surface-8: #768390;
+	--surface-9: #ADBAC7;
+	--surface-10: #CDD9E5;
+	--border: #444C56;
+	 */
 }
 body {
 	background-color: var(--col-bg);
 	color: var(--col-on-surface);
-	font-family: var(--ff2);
+
+	font-family: var(--ff);
+
 }
 ::-webkit-scrollbar {
 	width: 0px;
@@ -76,7 +77,9 @@ header {
 	position: relative;
 	padding: 1rem;
 	background-color: var(--col-p-500);
-	border-bottom: var(--line-2) solid var(--col-p-700);
+
+	/* border-bottom: var(--line-2) solid var(--col-p-500); */
+
 }
 header h1,
 header p {
@@ -88,6 +91,7 @@ header p {
 	background-color: var(--col-surface);
 	margin: 2rem;
 	border-radius: 12px;
+	border: var(--line-2) solid var(--border);
 }
 .type aside,
 .color aside {
@@ -236,6 +240,7 @@ header p {
 	background-color: var(--col-surface);
 	margin: 2rem;
 	border-radius: 12px;
+	border: var(--line-2) solid var(--border);
 }
 .primary h2 {
 	color: var(--col-p-500);
@@ -301,6 +306,11 @@ header p {
 #swatch1 {
 	background-color: var(--col-p-200);
 }
+#swatch1 h3,
+#swatch2 h3,
+#swatch3 h3 {
+	color: var(--col-on-primary);
+}
 #swatch2 {
 	background-color: var(--col-p-500);
 }
@@ -309,6 +319,11 @@ header p {
 }
 #swatch4 {
 	background-color: var(--col-s-200);
+}
+#swatch4 h3,
+#swatch5 h3,
+#swatch6 h3 {
+	color: var(--col-on-secondary);
 }
 #swatch5 {
 	background-color: var(--col-s-500);
@@ -347,12 +362,124 @@ header p {
 }
 .swatch-info h4 {
 	color: var(--col-on-surface);
+	padding-top: 1rem;
+	text-align: center;
 }
-
-
-
-
-
+.custom-btn {
+	color: var(--col-on-primary);
+    background-color: var(--col-p-500);
+    border-color: var(--col-surface2);
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--col-on-primary);
+    background-color: var(--col-on-bg);
+    background-clip: padding-box;
+    border: 1px solid var(--col-surface2);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.input-group-text {
+    display: flex;
+    align-items: center;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--col-on-primary);
+    text-align: center;
+    white-space: nowrap;
+    background-color: var(--col-surface2);
+    border: 1px solid var(--col-surface2);
+    border-radius: 0.25rem;
+}
+.input-group-text2 {
+    display: flex;
+    align-items: center;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--col-on-primary);
+    text-align: center;
+    white-space: nowrap;
+    background-color: var(--col-surface);
+    border: 1px solid var(--col-surface2);
+    border-radius: 0.25rem;
+}
+a {
+	text-decoration: none;
+	color: var(--col-bg);
+}
+a:hover,
+a:active {
+	text-decoration: none;
+	color: var(--col-surface2);
+}
+.form-control:focus {
+    color: var(--col-on-primary);
+    background-color: var(--col-on-bg);
+    border-color: var(--col-surface2);
+    outline: 0;
+    box-shadow: 0 0 0 0.125rem var(--col-p-200);
+}
+.btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.125rem var(--col-p-200);
+}
+.fa-solid {
+	color: var(--col-surface);
+}
+.fa-regular {
+	color: var(--col-surface);
+}
+.bii {
+	color: var(--col-bg);
+}
+.sii {
+	color: var(--col-surface);
+}
+.boi {
+	color: var(--col-surface2);
+}
+.p2 {
+	color: var(--col-p-200);
+}
+.p5 {
+	color: var(--col-p-500);
+}
+.p7 {
+	color: var(--col-p-700);
+}
+.s2 {
+	color: var(--col-s-200);
+}
+.s5 {
+	color: var(--col-s-500);
+}
+.s7 {
+	color: var(--col-s-700);
+}
+.tob {
+	color: var(--col-on-bg);
+}
+.tos {
+	color: var(--col-on-surface);
+}
+.topp {
+	color: var(--col-on-primary);
+}
+.to2 {
+	color: var(--col-on-secondary);
+}
 
 @media screen and (max-width: 992px) {
 	.weight {
@@ -362,8 +489,8 @@ header p {
 		flex-wrap: wrap;
 	}
     .swatch-inner {
-        width: 4rem;
-        height: 4rem;
+        width: 7rem;
+        height: 7rem;
     }
 
 }
