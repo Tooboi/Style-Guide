@@ -408,6 +408,15 @@ header p {
     border: 1px solid var(--col-surface2);
     border-radius: 0.25rem;
 }
+a {
+	text-decoration: none;
+	color: var(--col-bg);
+}
+a:hover,
+a:active {
+	text-decoration: none;
+	color: var(--col-surface2);
+}
 .form-control:focus {
     color: var(--col-on-primary);
     background-color: var(--col-on-bg);
