@@ -1,5 +1,6 @@
 :root {
 	--ff: "Nunito", sans-serif;
+
 	--fw-light: 300;
 	--fw-regular: 400;
 	--fw-medium: 500;
@@ -8,6 +9,7 @@
 
 	--line-2: 0.125rem;
     --line-4: 1.25rem;
+
 
 	--col-bg: hsl(176, 30%, 21%);
 	/* element bg */
@@ -22,11 +24,12 @@
 	--col-s-200: hsl(52, 71%, 87%);
 	--col-s-500: hsl(52, 71%, 67%);
 	--col-s-700: hsl(52, 65%, 60%);
+
 	/* text colors */
-	--col-on-bg: #ffffff;
-	--col-on-surface: #ffffff;
-	--col-on-primary: #000000;
-	--col-on-secondary: #000000;
+	--col-on-bg: #9aa5ce;
+	--col-on-surface: #a9b1d6;
+	--col-on-primary: #1a1b26;
+	--col-on-secondary: #1a1b26;
 
 	/* GitHub Theme */
 	/* Surface Colors */
@@ -43,7 +46,9 @@
 body {
 	background-color: var(--col-bg);
 	color: var(--col-on-surface);
+
 	font-family: var(--ff);
+
 }
 ::-webkit-scrollbar {
 	width: 0px;
@@ -72,7 +77,9 @@ header {
 	position: relative;
 	padding: 1rem;
 	background-color: var(--col-p-500);
+
 	/* border-bottom: var(--line-2) solid var(--col-p-500); */
+
 }
 header h1,
 header p {
@@ -134,8 +141,8 @@ header p {
 .weight figure {
 	border: var(--line-2) solid var(--col-surface2);
 	position: relative;
-	min-width: 124px;
-	width: 16%;
+	min-width: 140px;
+	width: 18%;
 	border-radius: 6px;
 }
 .top {
@@ -284,7 +291,7 @@ header p {
 	border: var(--line-2) solid var(--col-surface2);
 	border-radius: 6px;
     margin: 1rem;
-    max-width: 9rem;
+    max-width: 10rem;
     min-width: 9rem;
 }
 .swatch figure {
