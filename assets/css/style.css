@@ -1,5 +1,5 @@
 :root {
-	font-family: "Nunito", sans-serif;
+	--ff: "Nunito", sans-serif;
 	--fw-light: 300;
 	--fw-regular: 400;
 	--fw-medium: 500;
@@ -9,71 +9,41 @@
 	--line-2: 0.125rem;
     --line-4: 1.25rem;
 
-	/* Dark mode */
-	/* page bg */
-	--col-bg: #1D2128;
+	--col-bg: hsl(176, 30%, 21%);
 	/* element bg */
-	--col-surface: #23272E;
+	--col-surface: hsl(176, 38%, 31%);
 	/* one level up */
-	--col-surface2: #444C56;
+	--col-surface2: hsl(176, 30%, 41%);
 	/* primary colors */
-	--col-p-200: #CDD9E5;
-	--col-p-500: #ADBAC7;
-	--col-p-700: #2D333B;
-	/* secondary colors */
-	--col-s-200: #CDD9E5;
-	--col-s-500: #CDD9E5;
-	--col-s-700: #CDD9E5;
-	/* text colors */
-	--col-on-bg: #CDD9E5;
-	--col-on-surface: #CDD9E5;
-	--col-on-primary: #23272E;
-	--col-on-secondary: #23272E;
-
-	/* --col-bg: hsl(176, 30%, 21%); */
-	/* element bg */
-	/* --col-surface: hsl(176, 38%, 31%); */
-	/* one level up */
-	/* --col-surface2: hsl(176, 30%, 41%);
 	--col-p-200: hsl(52, 71%, 87%);
 	--col-p-500: hsl(52, 71%, 67%);
-	--col-p-700: hsl(52, 65%, 60%); */
+	--col-p-700: hsl(52, 65%, 60%);
 	/* secondary colors */
-	/* --col-s-200: hsl(52, 71%, 87%);
+	--col-s-200: hsl(52, 71%, 87%);
 	--col-s-500: hsl(52, 71%, 67%);
-	--col-s-700: hsl(52, 65%, 60%); */
+	--col-s-700: hsl(52, 65%, 60%);
 	/* text colors */
-	/* --col-on-bg: #ffffff;
+	--col-on-bg: #ffffff;
 	--col-on-surface: #ffffff;
 	--col-on-primary: #000000;
-	--col-on-secondary: #000000; */
-	/* Light mode 
-    --col-bg: #ffffff;
-    --col-surface: #ffffff;
-    --col-p: #fbe526;
-    --col-pv: #f8ba18;
-    --col-s: #abc2cb;
-    --col-sv: #3f5e6a;
-    --col-on-bg: #000000;
-    --col-on-surface: #000000;
-    --col-on-primary: #ffffff;
-    --col-on-secondary: #000000;*/
+	--col-on-secondary: #000000;
 
 	/* GitHub Theme */
 	/* Surface Colors */
-	--surface-0: #1D2128;
+	/* --surface-0: #1D2128;
 	--surface-1: #23272E;
-	--surface-2: #2D333B;
+	--surface-2: #2D333B; */
 	/* Text colors */
-	--surface-8: #768390;
+	/* --surface-8: #768390;
 	--surface-9: #ADBAC7;
 	--surface-10: #CDD9E5;
 	--border: #444C56;
-	
+	 */
 }
 body {
 	background-color: var(--col-bg);
 	color: var(--col-on-surface);
+	font-family: var(--ff);
 }
 ::-webkit-scrollbar {
 	width: 0px;
@@ -413,7 +383,7 @@ header p {
     border-radius: 0.25rem;
 }
 .form-control:focus {
-    color: #212529;
+    color: var(--col-on-primary);
     background-color: var(--col-on-bg);
     border-color: var(--col-surface2);
     outline: 0;
@@ -423,7 +393,12 @@ header p {
     outline: 0;
     box-shadow: 0 0 0 0.125rem var(--col-p-200);
 }
-
+.fa-solid {
+	color: var(--col-surface);
+}
+.fa-regular {
+	color: var(--col-surface);
+}
 
 
 @media screen and (max-width: 992px) {
