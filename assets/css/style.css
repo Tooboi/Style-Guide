@@ -299,6 +299,11 @@ header p {
 #swatch1 {
 	background-color: var(--col-p-200);
 }
+#swatch1 h3,
+#swatch2 h3,
+#swatch3 h3 {
+	color: var(--col-on-primary);
+}
 #swatch2 {
 	background-color: var(--col-p-500);
 }
@@ -307,6 +312,11 @@ header p {
 }
 #swatch4 {
 	background-color: var(--col-s-200);
+}
+#swatch4 h3,
+#swatch5 h3,
+#swatch6 h3 {
+	color: var(--col-on-secondary);
 }
 #swatch5 {
 	background-color: var(--col-s-500);
@@ -345,6 +355,8 @@ header p {
 }
 .swatch-info h4 {
 	color: var(--col-on-surface);
+	padding-top: 1rem;
+	text-align: center;
 }
 .custom-btn {
 	color: var(--col-on-primary);
@@ -378,7 +390,21 @@ header p {
     color: var(--col-on-primary);
     text-align: center;
     white-space: nowrap;
-    background-color: var(--col-on-bg);
+    background-color: var(--col-surface2);
+    border: 1px solid var(--col-surface2);
+    border-radius: 0.25rem;
+}
+.input-group-text2 {
+    display: flex;
+    align-items: center;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--col-on-primary);
+    text-align: center;
+    white-space: nowrap;
+    background-color: var(--col-surface);
     border: 1px solid var(--col-surface2);
     border-radius: 0.25rem;
 }
@@ -399,7 +425,45 @@ header p {
 .fa-regular {
 	color: var(--col-surface);
 }
-
+.bii {
+	color: var(--col-bg);
+}
+.sii {
+	color: var(--col-surface);
+}
+.boi {
+	color: var(--col-surface2);
+}
+.p2 {
+	color: var(--col-p-200);
+}
+.p5 {
+	color: var(--col-p-500);
+}
+.p7 {
+	color: var(--col-p-700);
+}
+.s2 {
+	color: var(--col-s-200);
+}
+.s5 {
+	color: var(--col-s-500);
+}
+.s7 {
+	color: var(--col-s-700);
+}
+.tob {
+	color: var(--col-on-bg);
+}
+.tos {
+	color: var(--col-on-surface);
+}
+.topp {
+	color: var(--col-on-primary);
+}
+.to2 {
+	color: var(--col-on-secondary);
+}
 
 @media screen and (max-width: 992px) {
 	.weight {
@@ -409,8 +473,8 @@ header p {
 		flex-wrap: wrap;
 	}
     .swatch-inner {
-        width: 4rem;
-        height: 4rem;
+        width: 7rem;
+        height: 7rem;
     }
 
 }
