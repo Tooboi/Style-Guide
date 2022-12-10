@@ -6,23 +6,17 @@
 
 ## Description
 
-- A place to test out color and font ideas
-
-## Installation
-
-N/A
+- A place to test out color and font ideas for your next web development project
 
 ## Usage
 
-- Edit the variables in the style.css file
-- Edit corresponding names in index.html file
-- Open in browser to view your new style guide
+- Input the colors you want to change in hex code format and hit `Swap Theme`
 
 ## Deployment
 
 Use the following link to visit this style guide: [Following Link](https://tooboi.github.io/Style-Guide/)
 
-![screenshot of web page](/assets/images/StyleGuideCapture.png)
+![screenshot of web page](/assets/images/Demo.png)
 
 ## License
 

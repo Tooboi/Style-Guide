@@ -26,22 +26,10 @@
 	--col-s-700: hsl(52, 65%, 60%);
 
 	/* text colors */
-	--col-on-bg: #9aa5ce;
-	--col-on-surface: #a9b1d6;
+	--col-on-bg: #c6ccdf;
+	--col-on-surface: #cbd0e6;
 	--col-on-primary: #1a1b26;
 	--col-on-secondary: #1a1b26;
-
-	/* GitHub Theme */
-	/* Surface Colors */
-	/* --surface-0: #1D2128;
-	--surface-1: #23272E;
-	--surface-2: #2D333B; */
-	/* Text colors */
-	/* --surface-8: #768390;
-	--surface-9: #ADBAC7;
-	--surface-10: #CDD9E5;
-	--border: #444C56;
-	 */
 }
 body {
 	background-color: var(--col-bg);
@@ -97,7 +85,11 @@ header p {
 .color aside {
 	width: 20%;
 	color: var(--col-on-surface);
-	text-align: center;
+	text-align: right;
+	
+}
+.type aside h6 {
+	padding-right: 0.25rem;
 }
 .type aside h2,
 .color aside h2 {
@@ -297,9 +289,13 @@ header p {
 .swatch figure {
 	padding: 1rem;
 }
+figure h3 {
+	padding-top: 2rem;
+	text-align: center;
+}
 .swatch-inner {
-    width: 6rem;
-	height: 6rem;
+    width: 7rem;
+	height: 7rem;
     border-radius: 4px;
     margin: 0 auto;
 }
@@ -333,29 +329,32 @@ header p {
 }
 #swatch7 {
 	background-color: var(--col-on-bg);
-    border: var(--line-4) solid var(--col-bg);
+	color: var(--col-bg);
 }
 #swatch8 {
 	background-color: var(--col-on-surface);
-    border: var(--line-4) solid var(--col-surface);
+	color: var(--col-bg);
 }
 #swatch9 {
 	background-color: var(--col-on-primary);
-    border: var(--line-4) solid var(--col-p-500);
+	color: var(--col-on-bg);
 }
 #swatch10 {
 	background-color: var(--col-on-secondary);
-    border: var(--line-4) solid var(--col-s-500);
+	color: var(--col-on-bg);
 }
 #swatch11 {
 	background-color: var(--col-bg);
+	color: var(--col-on-bg);
 }
 #swatch12 {
 	background-color: var(--col-surface);
-    border: var(--line-2) solid var(--col-surface2);
+	color: var(--col-on-surface);
+    /* border: var(--line-2) solid var(--col-surface2); */
 }
 #swatch13 {
 	background-color: var(--col-surface2);
+	color: var(--col-on-surface);
 }
 .swatch-info h3 {
 	color: var(--col-on-surface);
@@ -417,12 +416,12 @@ header p {
 }
 a {
 	text-decoration: none;
-	color: var(--col-bg);
+	color: var(--col-on-surface);
 }
 a:hover,
 a:active {
 	text-decoration: none;
-	color: var(--col-surface2);
+	color: var(--col-on-surface);
 }
 .form-control:focus {
     color: var(--col-on-primary);
