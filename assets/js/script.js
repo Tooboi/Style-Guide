@@ -29,16 +29,19 @@ const onPrimaryText = document.getElementById("swatch9T");
 const onSecondaryText = document.getElementById("swatch10T");
 
 const alumniSans = document.getElementById("alumniSans");
+const crimsonPro = document.getElementById("crimsonPro");
 const fraunces = document.getElementById("fraunces");
 const grenze = document.getElementById("grenze");
 const montserrat = document.getElementById("montserrat");
 const museoModerno = document.getElementById("museoModerno");
 const nunito = document.getElementById("nunito");
+const poppins = document.getElementById("poppins");
+const quicksand = document.getElementById("quicksand");
 const roboto = document.getElementById("roboto");
 
 const fontName = document.getElementById('fontName');
 
-const fonts = [alumniSans, fraunces, grenze, montserrat, museoModerno, nunito, roboto];
+const fonts = [alumniSans, crimsonPro, fraunces, grenze, montserrat, museoModerno, nunito, poppins, quicksand, roboto];
 
 console.log(fonts);
 
