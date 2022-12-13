@@ -16,7 +16,7 @@
 
 Use the following link to visit this style guide: [Following Link](https://tooboi.github.io/Style-Guide/)
 
-![screenshot of web page](/assets/images/Demo.png)
+![screenshot of web page](/public/images/Demo.png)
 
 ## License
 
