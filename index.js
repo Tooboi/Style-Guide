@@ -1,4 +1,11 @@
+// const randomize = require("./assets/js/randomize.js");
+
+
+// Forms
 const form = document.getElementById("hexCodeForm");
+const formRandom = document.getElementById("randomize");
+
+// Text field inputs
 const backgroundInput = document.getElementById("backgroundInput");
 const surfaceInput = document.getElementById("surfaceInput");
 const borderInput = document.getElementById("borderInput");
@@ -14,6 +21,7 @@ const onPrimaryInput = document.getElementById("onPrimaryInput");
 const onSecondaryInput = document.getElementById("onSecondaryInput");
 const rootTheme = document.querySelector(":root");
 
+// Color swatches
 const p200Text = document.getElementById("swatch1T");
 const p500Text = document.getElementById("swatch2T");
 const p700Text = document.getElementById("swatch3T");
@@ -28,7 +36,7 @@ const onSurfaceText = document.getElementById("swatch8T");
 const onPrimaryText = document.getElementById("swatch9T");
 const onSecondaryText = document.getElementById("swatch10T");
 
-const alumniSans = document.getElementById("alumniSans");
+// Font inputs
 const crimsonPro = document.getElementById("crimsonPro");
 const fraunces = document.getElementById("fraunces");
 const grenze = document.getElementById("grenze");
@@ -41,9 +49,8 @@ const roboto = document.getElementById("roboto");
 
 const fontName = document.getElementById('fontName');
 
-const fonts = [alumniSans, crimsonPro, fraunces, grenze, montserrat, museoModerno, nunito, poppins, quicksand, roboto];
+const fonts = [crimsonPro, fraunces, grenze, montserrat, museoModerno, nunito, poppins, quicksand, roboto];
 
-console.log(fonts);
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -100,4 +107,22 @@ for (let i = 0; i < fonts.length; i++) {
 }
     
  
+});
+var primaryColGen = "";
+function generateColor() {
+  // Generate a random color in hexadecimal format
+  const color = "#" + Math.floor(Math.random() * 16777215).toString(16);
+  // Create a lighter and darker version of the color by
+  // adding or subtracting a small amount from the red, green, and blue components of the color
+  // const lighterColor = colorLuminance(color, 0.1);
+  // const darkerColor = colorLuminance(color, -0.1);
+
+  primaryColGen = color;
+}
+
+formRandom.addEventListener("submit", (event) =>  {
+  event.preventDefault()
+  generateColor();
+  console.log(primaryColGen);
+
 });
