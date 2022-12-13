@@ -1,0 +1,24 @@
+{
+  "name": "style-guide",
+  "version": "1.0.0",
+  "description": "![GitHub top language](https://img.shields.io/github/languages/top/tooboi/style-guide?color=yellow)\r ![GitHub language count](https://img.shields.io/github/languages/count/tooboi/style-guide?color=yellow)\r ![GitHub](https://img.shields.io/github/license/tooboi/style-guide?color=yellow)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tooboi/Style-Guide.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tooboi/Style-Guide/issues"
+  },
+  "homepage": "https://github.com/Tooboi/Style-Guide#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "tinycolor2": "^1.4.2"
+  }
+}
