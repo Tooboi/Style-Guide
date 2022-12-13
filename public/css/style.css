@@ -97,7 +97,7 @@ header p {
   text-align: right;
 }
 .type aside h6 {
-  padding-right: 0.25rem;
+  padding: 0 0.5rem;
 }
 .type aside h2,
 .color aside h2 {
@@ -376,6 +376,14 @@ figure h3 {
   background-color: var(--col-p-500);
   border-color: var(--col-surface2);
 }
+.custom-btn2 {
+  color: var(--col-on-secondary);
+  background-color: var(--col-s-500);
+  border-color: var(--col-surface2);
+}
+.icon {
+  color: var(--col-p-500);
+}
 .form-control {
   display: block;
   width: 100%;
@@ -420,6 +428,22 @@ figure h3 {
   background-color: var(--col-surface);
   border: 1px solid var(--col-surface2);
   border-radius: 0.25rem;
+}
+.form-check-input[type=radio] {
+  border-radius: 0.25rem;
+  background-color: var(--col-on-surface);
+  border-color: var(--col-surface2);
+}
+.form-check-input[type=radio]:checked {
+  border-radius: 0.25rem;
+  background-color: var(--col-p-700);
+  border-color: var(--col-surface2);
+}
+.form-check-input:active {
+  box-shadow: 0 0 0 0.25rem var(--col-surface2);
+}
+.form-check-input:focus {
+  box-shadow: 0 0 0 0 var(--col-surface2);
 }
 a {
   text-decoration: none;

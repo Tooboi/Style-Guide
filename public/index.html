@@ -17,12 +17,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@100;200;300;400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,100;9..144,200;9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Grenze:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=MuseoModerno:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@100;200;300;400;500;600;700;800;900&family=Crimson+Pro:wght@200;300;400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,100;9..144,200;9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Grenze:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=MuseoModerno:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/css/reset.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Style Guide</title>
+    <link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>UI Style Guide</title>
   </head>
   <body>
     <header>
@@ -36,11 +37,17 @@
           <br />
           <h6>Accepts <a id="href" href="https://www.w3schools.com/colors/colors_names.asp">HTML color names</a></h6>
           <br />
-          <h6>Primary 500 is your main color<br />Rich midtone</h6>
+          <h6>Primary 500 is your main color<br />Rich mid-tone</h6>
           <br />
           <h6>200 is lighter than 500<br />by 10 - 20%</h6>
           <br />
           <h6>700 is darker than 500<br />by 10 - 20%</h6>
+          <br />
+          <form id="randomize" class="row">
+            <div class="col-12">
+              <button class="btn custom-btn2" type="submit">Random Palette</button>
+            </div>
+          </form>
         </aside>
         <div class="type-area">
           <form id="hexCodeForm" class="row g-3">
@@ -55,113 +62,121 @@
               <label for="surfaceInput" class="form-label">Surface</label>
               <div class="input-group">
                 <span class="input-group-text" id="inputGroupPrepend"><i class="sii fa-solid fa-clone"></i></span>
-                <input type="text" class="form-control" id="surfaceInput" placeholder="#316d69" value="#316d69"/>
+                <input type="text" class="form-control" id="surfaceInput" placeholder="#316d69" value="#316d69" />
               </div>
             </div>
             <div class="col-md-4">
               <label for="borderInput" class="form-label">Border</label>
               <div class="input-group">
                 <span class="input-group-text2" id="inputGroupPrepend"><i class="boi fa-regular fa-square"></i></span>
-                <input type="text" class="form-control" id="borderInput" placeholder="#498884" value="#498884"/>
+                <input type="text" class="form-control" id="borderInput" placeholder="#498884" value="#498884" />
               </div>
             </div>
             <div class="col-md-4">
               <label for="p200Input" class="form-label">Primary 200</label>
               <div class="input-group">
                 <span class="input-group-text" id="inputGroupPrepend"><i class="p2 fa-solid fa-circle-half-stroke"></i></span>
-                <input type="text" class="form-control" id="p200Input" placeholder="#f5efc6" value="#f5efc6"/>
+                <input type="text" class="form-control" id="p200Input" placeholder="#f5efc6" value="#f5efc6" />
               </div>
             </div>
             <div class="col-md-4">
               <label for="p500Input" class="form-label">Primary 500</label>
               <div class="input-group">
                 <span class="input-group-text" id="inputGroupPrepend"><i class="p5 fa-solid fa-circle-half-stroke"></i></span>
-                <input type="text" class="form-control" id="p500Input" placeholder="#e7d76f" value="#e7d76f"/>
+                <input type="text" class="form-control" id="p500Input" placeholder="#e7d76f" value="#e7d76f" />
               </div>
             </div>
             <div class="col-md-4">
               <label for="p700Input" class="form-label">Primary 700</label>
               <div class="input-group">
                 <span class="input-group-text" id="inputGroupPrepend"><i class="p7 fa-solid fa-circle-half-stroke"></i></span>
-                <input type="text" class="form-control" id="p700Input" placeholder="#dbca57" value="#dbca57"/>
+                <input type="text" class="form-control" id="p700Input" placeholder="#dbca57" value="#dbca57" />
               </div>
             </div>
             <div class="col-md-4">
               <label for="s200Input" class="form-label">Secondary 200</label>
               <div class="input-group">
                 <span class="input-group-text" id="inputGroupPrepend"><i class="s2 fa-solid fa-circle"></i></span>
-                <input type="text" class="form-control" id="s200Input" placeholder="#c6e6f5" value="#c6e6f5"/>
+                <input type="text" class="form-control" id="s200Input" placeholder="#c6e6f5" value="#c6e6f5" />
               </div>
             </div>
             <div class="col-md-4">
               <label for="s500Input" class="form-label">Secondary 500</label>
               <div class="input-group">
                 <span class="input-group-text" id="inputGroupPrepend"><i class="s5 fa-solid fa-circle"></i></span>
-                <input type="text" class="form-control" id="s500Input" placeholder="#6fbfe7" value="#6fbfe7"/>
+                <input type="text" class="form-control" id="s500Input" placeholder="#6fbfe7" value="#6fbfe7" />
               </div>
             </div>
             <div class="col-md-4">
               <label for="s700Input" class="form-label">Secondary 700</label>
               <div class="input-group">
                 <span class="input-group-text" id="inputGroupPrepend"><i class="s7 fa-solid fa-circle"></i></span>
-                <input type="text" class="form-control" id="s700Input" placeholder="#57afdb" value="#57afdb"/>
+                <input type="text" class="form-control" id="s700Input" placeholder="#57afdb" value="#57afdb" />
               </div>
             </div>
             <div class="col-md-3">
               <label for="onBackgroundInput" class="form-label">Text on Background</label>
               <div class="input-group">
                 <span class="input-group-text" id="inputGroupPrepend"><i class="tob fa-solid fa-font"></i></span>
-                <input type="text" class="form-control" id="onBackgroundInput" placeholder="#c6ccdf" value="#c6ccdf"/>
+                <input type="text" class="form-control" id="onBackgroundInput" placeholder="#c6ccdf" value="#c6ccdf" />
               </div>
             </div>
             <div class="col-md-3">
               <label for="onSurfaceInput" class="form-label">Text on Surface</label>
               <div class="input-group">
                 <span class="input-group-text" id="inputGroupPrepend"><i class="tos fa-solid fa-font"></i></span>
-                <input type="text" class="form-control" id="onSurfaceInput" placeholder="#cbd0e6" value="#cbd0e6"/>
+                <input type="text" class="form-control" id="onSurfaceInput" placeholder="#cbd0e6" value="#cbd0e6" />
               </div>
             </div>
             <div class="col-md-3">
               <label for="onPrimaryInput" class="form-label">Text on Primary</label>
               <div class="input-group">
                 <span class="input-group-text" id="inputGroupPrepend"><i class="topp fa-solid fa-font"></i></span>
-                <input type="text" class="form-control" id="onPrimaryInput" placeholder="#1a1b26" value="#1a1b26"/>
+                <input type="text" class="form-control" id="onPrimaryInput" placeholder="#1a1b26" value="#1a1b26" />
               </div>
             </div>
             <div class="col-md-3">
               <label for="onSecondaryInput" class="form-label">Text on Secondary</label>
               <div class="input-group">
                 <span class="input-group-text" id="inputGroupPrepend"><i class="to2 fa-solid fa-font"></i></span>
-                <input type="text" class="form-control" id="onSecondaryInput" placeholder="#1a1b26" value="#1a1b26"/>
+                <input type="text" class="form-control" id="onSecondaryInput" placeholder="#1a1b26" value="#1a1b26" />
               </div>
             </div>
-            <label for="onPrimaryInput" class="form-label">Google Fonts</label>
+            <label for="onPrimaryInput" class="form-label"><h4>Google Fonts</h4></label>
             <div class="form-check col-md-2">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="alumniSans" value="'Alumni Sans', sans-serif" />
-              <label class="form-check-label" for="flexRadioDefault1"> Alumni Sans </label>
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="crimsonPro" value="'Crimson Pro'" />
+              <label class="form-check-label" for="flexRadioDefault1"> Crimson Pro </label>
             </div>
             <div class="form-check col-md-2">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="fraunces" value="'Fraunces', serif" />
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="fraunces" value="'Fraunces'" />
               <label class="form-check-label" for="flexRadioDefault1"> Fraunces </label>
             </div>
             <div class="form-check col-md-2">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="grenze" value="'Grenze', serif" />
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="grenze" value="'Grenze'" />
               <label class="form-check-label" for="flexRadioDefault1"> Grenze </label>
             </div>
             <div class="form-check col-md-2">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="montserrat" value="'Montserrat', sans-serif" />
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="montserrat" value="'Montserrat'" />
               <label class="form-check-label" for="flexRadioDefault2"> Montserrat </label>
             </div>
             <div class="form-check col-md-3">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="museoModerno" value="'MuseoModerno', cursive" />
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="museoModerno" value="'MuseoModerno'" />
               <label class="form-check-label" for="flexRadioDefault1"> MuseoModerno </label>
             </div>
             <div class="form-check col-md-2">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="nunito" value="'Nunito', sans-serif" checked />
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="nunito" value="'Nunito'" checked />
               <label class="form-check-label" for="flexRadioDefault1"> Nunito </label>
             </div>
             <div class="form-check col-md-2">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="roboto" value="'Roboto', sans-serif" />
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="poppins" value="'Poppins'" />
+              <label class="form-check-label" for="flexRadioDefault1"> Poppins </label>
+            </div>
+            <div class="form-check col-md-2">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="quicksand" value="'Quicksand'" />
+              <label class="form-check-label" for="flexRadioDefault1"> Quicksand </label>
+            </div>
+            <div class="form-check col-md-2">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="roboto" value="'Roboto'" />
               <label class="form-check-label" for="flexRadioDefault1"> Roboto </label>
             </div>
             <div class="col-12">
@@ -380,6 +395,7 @@
     <footer>
       <h6 class="footer">UI Style Guide was developed by <a href="https://github.com/Tooboi">Tooboi</a></h6>
     </footer>
-    <script src="./assets/js/script.js"></script>
+    <script type="module" src="./js/index.js"></script>
+    <script type='text/javascript' src='./js/tinycolor.js'></script>
   </body>
 </html>
