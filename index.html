@@ -23,7 +23,12 @@
     <link data-vue-tag="ssr" rel="icon" type="image/png" sizes="32x32" href="./public/images/favicon.ico" />
     <link rel="stylesheet" href="./public/css/reset.css" />
     <link rel="stylesheet" href="./public/css/style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.2/tinycolor.min.js" integrity="sha512-+aXA9mgbUvFe0ToTlbt8/3vT7+nOgUmFw29wfFCsGoh8AZMRSU0p4WtOvC1vkF2JBrndPN2TuNZsHPAKPPxe8Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.2/tinycolor.min.js"
+      integrity="sha512-+aXA9mgbUvFe0ToTlbt8/3vT7+nOgUmFw29wfFCsGoh8AZMRSU0p4WtOvC1vkF2JBrndPN2TuNZsHPAKPPxe8Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <title>UI Style Guide</title>
   </head>
   <body>
@@ -43,10 +48,26 @@
           <h6>200 is lighter than 500<br />by 10 - 20%</h6>
           <br />
           <h6>700 is darker than 500<br />by 10 - 20%</h6>
-          <br />
-          <form id="randomize" class="row">
+          <form id="randomize" class=" ps-4 my-1">
+            <label for="onPrimaryInput" class="form-label p-2"><h4>Color Scheme</h4></label>
+            <div class="form-check ">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="analogous" value="analogous" />
+              <label class="form-check-label text-start" for="analogous"> Analogous </label>
+            </div>
+            <div class="form-check ">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="splitcomplement" value="splitcomplement" />
+              <label class="form-check-label" for="splitcomplement"> Split Complementary </label>
+            </div>
+            <div class="form-check ">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="triad" value="triad" />
+              <label class="form-check-label" for="triad"> Triadic </label>
+            </div>
+            <div class="form-check ">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="tetrad" value="tetrad" />
+              <label class="form-check-label" for="tetrad"> Tetradic </label>
+            </div>
             <div class="col-12">
-              <button class="btn custom-btn2" type="submit">Random Palette</button>
+              <button class="btn custom-btn2 m-2" type="submit">Randomize Palette</button>
             </div>
           </form>
         </aside>

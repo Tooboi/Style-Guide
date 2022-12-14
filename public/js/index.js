@@ -1,6 +1,4 @@
-
-
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   const backgroundInput = document.getElementById("backgroundInput");
   const surfaceInput = document.getElementById("surfaceInput");
   const borderInput = document.getElementById("borderInput");
@@ -15,14 +13,11 @@ if (typeof window !== 'undefined') {
   const onPrimaryInput = document.getElementById("onPrimaryInput");
   const onSecondaryInput = document.getElementById("onSecondaryInput");
   const rootTheme = document.querySelector(":root");
-  
-
 
   const form = document.getElementById("hexCodeForm");
   const formRandom = document.getElementById("randomize");
 
   // Text field inputs
-  
 
   // Color swatches
   const p200Text = document.getElementById("swatch1T");
@@ -52,110 +47,167 @@ if (typeof window !== 'undefined') {
 
   const fontName = document.getElementById("fontName");
 
-// Forms
+  // Forms
 
-const fonts = [crimsonPro, fraunces, grenze, montserrat, museoModerno, nunito, poppins, quicksand, roboto];
+  const fonts = [crimsonPro, fraunces, grenze, montserrat, museoModerno, nunito, poppins, quicksand, roboto];
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const background = backgroundInput.value;
-  const surface = surfaceInput.value;
-  const border = borderInput.value;
-  const p200 = p200Input.value;
-  const p500 = p500Input.value;
-  const p700 = p700Input.value;
-  const s200 = s200Input.value;
-  const s500 = s500Input.value;
-  const s700 = s700Input.value;
-  const onBackground = onBackgroundInput.value;
-  const onSurface = onSurfaceInput.value;
-  const onPrimary = onPrimaryInput.value;
-  const onSecondary = onSecondaryInput.value;
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const background = backgroundInput.value;
+    const surface = surfaceInput.value;
+    const border = borderInput.value;
+    const p200 = p200Input.value;
+    const p500 = p500Input.value;
+    const p700 = p700Input.value;
+    const s200 = s200Input.value;
+    const s500 = s500Input.value;
+    const s700 = s700Input.value;
+    const onBackground = onBackgroundInput.value;
+    const onSurface = onSurfaceInput.value;
+    const onPrimary = onPrimaryInput.value;
+    const onSecondary = onSecondaryInput.value;
 
-  rootTheme.style.setProperty("--col-bg", background);
-  rootTheme.style.setProperty("--col-surface", surface);
-  rootTheme.style.setProperty("--col-surface2", border);
-  rootTheme.style.setProperty("--col-p-200", p200);
-  rootTheme.style.setProperty("--col-p-500", p500);
-  rootTheme.style.setProperty("--col-p-700", p700);
-  rootTheme.style.setProperty("--col-s-200", s200);
-  rootTheme.style.setProperty("--col-s-500", s500);
-  rootTheme.style.setProperty("--col-s-700", s700);
-  rootTheme.style.setProperty("--col-on-bg", onBackground);
-  rootTheme.style.setProperty("--col-on-surface", onSurface);
-  rootTheme.style.setProperty("--col-on-primary", onPrimary);
-  rootTheme.style.setProperty("--col-on-secondary", onSecondary);
+    rootTheme.style.setProperty("--col-bg", background);
+    rootTheme.style.setProperty("--col-surface", surface);
+    rootTheme.style.setProperty("--col-surface2", border);
+    rootTheme.style.setProperty("--col-p-200", p200);
+    rootTheme.style.setProperty("--col-p-500", p500);
+    rootTheme.style.setProperty("--col-p-700", p700);
+    rootTheme.style.setProperty("--col-s-200", s200);
+    rootTheme.style.setProperty("--col-s-500", s500);
+    rootTheme.style.setProperty("--col-s-700", s700);
+    rootTheme.style.setProperty("--col-on-bg", onBackground);
+    rootTheme.style.setProperty("--col-on-surface", onSurface);
+    rootTheme.style.setProperty("--col-on-primary", onPrimary);
+    rootTheme.style.setProperty("--col-on-secondary", onSecondary);
 
-  p200Text.innerText = p200;
-  p500Text.innerText = p500;
-  p700Text.innerText = p700;
-  s200Text.innerText = s200;
-  s500Text.innerText = s500;
-  s700Text.innerText = s700;
-  backgroundText.innerText = background;
-  surfaceText.innerText = surface;
-  borderText.innerText = border;
-  onBackgroundText.innerText = onBackground;
-  onSurfaceText.innerText = onSurface;
-  onPrimaryText.innerText = onPrimary;
-  onSecondaryText.innerText = onSecondary;
+    p200Text.innerText = p200;
+    p500Text.innerText = p500;
+    p700Text.innerText = p700;
+    s200Text.innerText = s200;
+    s500Text.innerText = s500;
+    s700Text.innerText = s700;
+    backgroundText.innerText = background;
+    surfaceText.innerText = surface;
+    borderText.innerText = border;
+    onBackgroundText.innerText = onBackground;
+    onSurfaceText.innerText = onSurface;
+    onPrimaryText.innerText = onPrimary;
+    onSecondaryText.innerText = onSecondary;
 
-  for (let i = 0; i < fonts.length; i++) {
-    const current = fonts[i];
-    if (current.checked === true) {
-      let fontFamily = current.value;
-      console.log(fontFamily.replace(/['"]+/g, ""));
-      rootTheme.style.setProperty("--ff", fontFamily);
-      fontName.innerText = fontFamily.replace(/['"]+/g, "");
+    for (let i = 0; i < fonts.length; i++) {
+      const current = fonts[i];
+      if (current.checked === true) {
+        let fontFamily = current.value;
+        console.log(fontFamily.replace(/['"]+/g, ""));
+        rootTheme.style.setProperty("--ff", fontFamily);
+        fontName.innerText = fontFamily.replace(/['"]+/g, "");
+      }
     }
+  });
+  var primaryCol = "";
+  var primaryLight = "";
+  var primaryDark = "";
+  function generateColor() {
+    // Generate a random color in hexadecimal format
+    var pColor = tinycolor.random().toHexString();
+    // Get luminance
+    let pLuminance = tinycolor(pColor).getLuminance();
+    // DOM Traverse
+    primaryCol = tinycolor(pColor)._originalInput;
+    console.log("Original Color: " + primaryCol);
+    // Declare empty primary confirm color
+    var primaryColConfirm = "";
+
+    console.log("Luminance: " + pLuminance);
+    // Adjust Brightness
+    if (pLuminance < 0.15) {
+      console.log("Wayy Too Dark!");
+      primaryColConfirm = tinycolor(primaryCol).lighten(25).toHexString();
+      console.log("Lightened Color: " + primaryColConfirm);
+    }
+    if (pLuminance > 0.15 && pLuminance < 0.25) {
+      console.log("Much Too Dark!");
+      primaryColConfirm = tinycolor(primaryCol).lighten(20).toHexString();
+      console.log("Lightened Color: " + primaryColConfirm);
+    }
+    if (pLuminance > 0.25 && pLuminance < 0.5) {
+      console.log("Too Dark!");
+      primaryColConfirm = tinycolor(primaryCol).lighten(10).toHexString();
+      console.log("Lightened Color: " + primaryColConfirm);
+    }
+    if (pLuminance > 0.5 && pLuminance < 0.7) {
+      console.log("Mid-tone!");
+      primaryColConfirm = primaryCol;
+      console.log("Mid-Tone Color: " + primaryColConfirm);
+    }
+    if (pLuminance > 0.7 && pLuminance < 0.85) {
+      console.log("Too Light!");
+      primaryColConfirm = tinycolor(primaryCol).darken(15).toHexString();
+      console.log("Darkened Color: " + primaryColConfirm);
+    }
+    if (pLuminance > 0.85) {
+      console.log("Much Too Light!");
+      primaryColConfirm = tinycolor(primaryCol).darken(25).toHexString();
+      console.log("Darkened Color: " + primaryColConfirm);
+    }
+    // Split complementary color scheme maker
+    let splitComp = tinycolor(primaryColConfirm).analogous();
+    const secondaryCol = splitComp[1].toHexString();
+    let surfaceCol = splitComp[2].toHexString();
+    console.log("Secondary Color: " + secondaryCol);
+    console.log("Surface Color: " + surfaceCol);
+
+    // Make darker and lighter version
+    primaryLight = tinycolor(primaryColConfirm).desaturate(20).lighten(15).toHexString();
+    primaryDark = tinycolor(primaryColConfirm).desaturate(10).darken(15).toHexString();
+    const secondaryLight = tinycolor(secondaryCol).desaturate(20).lighten(15).toHexString();
+    const secondaryDark = tinycolor(secondaryCol).desaturate(10).darken(15).toHexString();
+    surfaceCol = tinycolor(surfaceCol).desaturate(40).darken(30).toHexString();
+    const backgroundCol = tinycolor(surfaceCol).darken(10).toHexString();
+    const borderCol = tinycolor(surfaceCol).lighten(15).toHexString();
+
+    rootTheme.style.setProperty("--col-bg", backgroundCol);
+    rootTheme.style.setProperty("--col-surface", surfaceCol);
+    rootTheme.style.setProperty("--col-surface2", borderCol);
+    rootTheme.style.setProperty("--col-p-200", primaryLight);
+    rootTheme.style.setProperty("--col-p-500", primaryColConfirm);
+    rootTheme.style.setProperty("--col-p-700", primaryDark);
+    rootTheme.style.setProperty("--col-s-200", secondaryLight);
+    rootTheme.style.setProperty("--col-s-500", secondaryCol);
+    rootTheme.style.setProperty("--col-s-700", secondaryDark);
+    // rootTheme.style.setProperty("--col-on-bg", onBackground);
+    // rootTheme.style.setProperty("--col-on-surface", onSurface);
+    // rootTheme.style.setProperty("--col-on-primary", onPrimary);
+    // rootTheme.style.setProperty("--col-on-secondary", onSecondary);
+
+    p200Text.innerText = primaryLight;
+    p500Text.innerText = primaryColConfirm;
+    p700Text.innerText = primaryDark;
+    s200Text.innerText = secondaryLight;
+    s500Text.innerText = secondaryCol;
+    s700Text.innerText = secondaryDark;
+    backgroundText.innerText = backgroundCol;
+    surfaceText.innerText = surfaceCol;
+    borderText.innerText = borderCol;
+    // onBackgroundText.innerText = onBackground;
+    // onSurfaceText.innerText = onSurface;
+    // onPrimaryText.innerText = onPrimary;
+    // onSecondaryText.innerText = onSecondary;
+    backgroundInput.value = backgroundCol;
+    borderInput.value = borderCol;
+    p200Input.value = primaryLight;
+    p500Input.value = primaryColConfirm;
+    p700Input.value = primaryDark;
+    surfaceInput.value = surfaceCol;
+    s200Input.value = secondaryLight;
+    s500Input.value = secondaryCol;
+    s700Input.value = secondaryDark;
   }
-});
-var primaryCol = "";
-var primaryLight = "";
-var primaryDark = "";
-function generateColor() {
-  // Generate a random color in hexadecimal format
-  const pColor = tinycolor.random().toHexString()
 
-  primaryCol = tinycolor(pColor)._originalInput;
-  primaryLight = tinycolor(primaryCol).lighten(15).toHexString();
-  primaryDark = tinycolor(primaryCol).darken(15).toHexString();
-  // rootTheme.style.setProperty("--col-bg", background);
-  // rootTheme.style.setProperty("--col-surface", surface);
-  // rootTheme.style.setProperty("--col-surface2", border);
-  rootTheme.style.setProperty("--col-p-200", primaryLight);
-  rootTheme.style.setProperty("--col-p-500", primaryCol);
-  rootTheme.style.setProperty("--col-p-700", primaryDark);
-  // rootTheme.style.setProperty("--col-s-200", s200);
-  // rootTheme.style.setProperty("--col-s-500", s500);
-  // rootTheme.style.setProperty("--col-s-700", s700);
-  // rootTheme.style.setProperty("--col-on-bg", onBackground);
-  // rootTheme.style.setProperty("--col-on-surface", onSurface);
-  // rootTheme.style.setProperty("--col-on-primary", onPrimary);
-  // rootTheme.style.setProperty("--col-on-secondary", onSecondary);
-
-  p200Text.innerText = primaryLight;
-  p500Text.innerText = primaryCol;
-  p700Text.innerText = primaryDark;
-  // s200Text.innerText = s200;
-  // s500Text.innerText = s500;
-  // s700Text.innerText = s700;
-  // backgroundText.innerText = background;
-  // surfaceText.innerText = surface;
-  // borderText.innerText = border;
-  // onBackgroundText.innerText = onBackground;
-  // onSurfaceText.innerText = onSurface;
-  // onPrimaryText.innerText = onPrimary;
-  // onSecondaryText.innerText = onSecondary;
-
-  p200Input.value = primaryLight;
-  p500Input.value = primaryCol;
-  p700Input.value = primaryDark;
+  formRandom.addEventListener("submit", (event) => {
+    event.preventDefault();
+    console.log("\u001b[34;1m -------\u001b[35;1mNEW-RANDOM\u001b[34;1m-------");
+    generateColor();
+  });
 }
-
-formRandom.addEventListener("submit", (event) => {
-  event.preventDefault();
-  generateColor();
-});
-}
-
