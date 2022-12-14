@@ -20,9 +20,15 @@
       href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@100;200;300;400;500;600;700;800;900&family=Crimson+Pro:wght@200;300;400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,100;9..144,200;9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Grenze:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=MuseoModerno:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96" href="./images/favicon.ico" />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link data-vue-tag="ssr" rel="icon" type="image/png" sizes="32x32" href="./public/images/favicon.ico" />
+    <link rel="stylesheet" href="./public/css/reset.css" />
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.2/tinycolor.min.js"
+      integrity="sha512-+aXA9mgbUvFe0ToTlbt8/3vT7+nOgUmFw29wfFCsGoh8AZMRSU0p4WtOvC1vkF2JBrndPN2TuNZsHPAKPPxe8Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <title>UI Style Guide</title>
   </head>
   <body>
@@ -42,10 +48,26 @@
           <h6>200 is lighter than 500<br />by 10 - 20%</h6>
           <br />
           <h6>700 is darker than 500<br />by 10 - 20%</h6>
-          <br />
-          <form id="randomize" class="row">
+          <form id="randomize" class=" ps-4 my-1">
+            <label for="onPrimaryInput" class="form-label p-2"><h4>Color Scheme</h4></label>
+            <div class="form-check ">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="analogous" value="analogous" />
+              <label class="form-check-label text-start" for="analogous"> Analogous </label>
+            </div>
+            <div class="form-check ">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="splitcomplement" value="splitcomplement" />
+              <label class="form-check-label" for="splitcomplement"> Split Complementary </label>
+            </div>
+            <div class="form-check ">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="triad" value="triad" />
+              <label class="form-check-label" for="triad"> Triadic </label>
+            </div>
+            <div class="form-check ">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="tetrad" value="tetrad" />
+              <label class="form-check-label" for="tetrad"> Tetradic </label>
+            </div>
             <div class="col-12">
-              <button class="btn custom-btn2" type="submit">Random Palette</button>
+              <button class="btn custom-btn2 m-2" type="submit">Randomize Palette</button>
             </div>
           </form>
         </aside>
@@ -142,42 +164,42 @@
                 <input type="text" class="form-control" id="onSecondaryInput" placeholder="#1a1b26" value="#1a1b26" />
               </div>
             </div>
-            <label for="onPrimaryInput" class="form-label"><h4>Google Fonts</h4></label>
+            <label for="onPrimaryInput" class="form-label pt-2"><h4>Google Fonts</h4></label>
             <div class="form-check col-md-2">
               <input class="form-check-input" type="radio" name="flexRadioDefault" id="crimsonPro" value="'Crimson Pro'" />
-              <label class="form-check-label" for="flexRadioDefault1"> Crimson Pro </label>
+              <label class="form-check-label" for="crimsonPro"> Crimson Pro </label>
             </div>
             <div class="form-check col-md-2">
               <input class="form-check-input" type="radio" name="flexRadioDefault" id="fraunces" value="'Fraunces'" />
-              <label class="form-check-label" for="flexRadioDefault1"> Fraunces </label>
+              <label class="form-check-label" for="fraunces"> Fraunces </label>
             </div>
             <div class="form-check col-md-2">
               <input class="form-check-input" type="radio" name="flexRadioDefault" id="grenze" value="'Grenze'" />
-              <label class="form-check-label" for="flexRadioDefault1"> Grenze </label>
+              <label class="form-check-label" for="grenze"> Grenze </label>
             </div>
             <div class="form-check col-md-2">
               <input class="form-check-input" type="radio" name="flexRadioDefault" id="montserrat" value="'Montserrat'" />
-              <label class="form-check-label" for="flexRadioDefault2"> Montserrat </label>
+              <label class="form-check-label" for="montserrat"> Montserrat </label>
             </div>
             <div class="form-check col-md-3">
               <input class="form-check-input" type="radio" name="flexRadioDefault" id="museoModerno" value="'MuseoModerno'" />
-              <label class="form-check-label" for="flexRadioDefault1"> MuseoModerno </label>
+              <label class="form-check-label" for="museoModerno"> MuseoModerno </label>
             </div>
             <div class="form-check col-md-2">
               <input class="form-check-input" type="radio" name="flexRadioDefault" id="nunito" value="'Nunito'" checked />
-              <label class="form-check-label" for="flexRadioDefault1"> Nunito </label>
+              <label class="form-check-label" for="nunito"> Nunito </label>
             </div>
             <div class="form-check col-md-2">
               <input class="form-check-input" type="radio" name="flexRadioDefault" id="poppins" value="'Poppins'" />
-              <label class="form-check-label" for="flexRadioDefault1"> Poppins </label>
+              <label class="form-check-label" for="poppins"> Poppins </label>
             </div>
             <div class="form-check col-md-2">
               <input class="form-check-input" type="radio" name="flexRadioDefault" id="quicksand" value="'Quicksand'" />
-              <label class="form-check-label" for="flexRadioDefault1"> Quicksand </label>
+              <label class="form-check-label" for="quicksand"> Quicksand </label>
             </div>
             <div class="form-check col-md-2">
               <input class="form-check-input" type="radio" name="flexRadioDefault" id="roboto" value="'Roboto'" />
-              <label class="form-check-label" for="flexRadioDefault1"> Roboto </label>
+              <label class="form-check-label" for="roboto"> Roboto </label>
             </div>
             <div class="col-12">
               <button class="btn custom-btn" type="submit">Swap Theme</button>
@@ -395,7 +417,7 @@
     <footer>
       <h6 class="footer">UI Style Guide was developed by <a href="https://github.com/Tooboi">Tooboi</a></h6>
     </footer>
-    <script type="module" src="./js/index.js"></script>
-    <script type='text/javascript' src='./js/tinycolor.js'></script>
+    <script type="module" src="./public/js/index.js"></script>
+    <script type="text/javascript" src="./public/js/tinycolor.js"></script>
   </body>
 </html>
