@@ -1,22 +1,3 @@
-// const randomize = require("./assets/js/randomize.js");
-// const tinycolor = require("./tinycolor");
-
-
-// let backgroundInput;
-// let surfaceInput;
-// let borderInput;
-// let p200Input;
-// let p500Input;
-// let p700Input;
-// let s200Input;
-// let s500Input;
-// let s700Input;
-// let onBackgroundInput;
-// let onSurfaceInput;
-// let onPrimaryInput;
-// let onSecondaryInput;
-// let rootTheme;
-
 
 
 if (typeof window !== 'undefined') {
@@ -130,47 +111,20 @@ form.addEventListener("submit", (event) => {
   }
 });
 var primaryCol = "";
+var primaryLight = "";
 function generateColor() {
   // Generate a random color in hexadecimal format
-  const color = "#" + Math.floor(Math.random() * 16777215).toString(16);
+  const color = tinycolor.random()
 
-  primaryCol = color;
+  primaryCol = tinycolor(color)._originalInput;
+  primaryLight = tinycolor(primaryCol).lighten(20).toHexString();
+  console.log(primaryCol);
+  console.log(primaryLight);
 }
-// const primaryLight = tinycolor(primaryCol).lighten(20).toHexString();
-
-// function colorLuminance(color, luminance) {
-//   // Convert the color to RGB format
-//   let newColor = hexToRgb(color);
-
-//   // Modify each RGB component of the color
-//   newColor.r = Math.max(0, Math.min(255, newColor.r + 255 * luminance));
-//   newColor.g = Math.max(0, Math.min(255, newColor.g + 255 * luminance));
-//   newColor.b = Math.max(0, Math.min(255, newColor.b + 255 * luminance));
-
-//   // Convert the modified color back to hexadecimal format
-//   return rgbToHex(newColor);
-// }
-
-// function rgbToHex(color) {
-//   // convert the color values to hexadecimal strings
-//   const rHex = color.r.toString(16);
-//   const gHex = color.g.toString(16);
-//   const bHex = color.b.toString(16);
-
-//   // pad the strings with leading zeros if necessary
-//   const paddedRHex = rHex.length === 1 ? "0" + rHex : rHex;
-//   const paddedGHex = gHex.length === 1 ? "0" + gHex : gHex;
-//   const paddedBHex = bHex.length === 1 ? "0" + bHex : bHex;
-
-//   // concatenate the strings to form the final hexadecimal color code
-//   return "#" + paddedRHex + paddedGHex + paddedBHex;
-// }
 
 formRandom.addEventListener("submit", (event) => {
   event.preventDefault();
   generateColor();
-  
-  console.log(primaryCol);
 });
 }
 
