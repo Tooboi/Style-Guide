@@ -99,6 +99,9 @@ header p {
 .type aside form {
   text-align: left;
 }
+#randomize {
+  border: var(--line-2) solid var(--border);
+}
 .type aside h6 {
   padding: 0 0.5rem;
 }

@@ -1,4 +1,4 @@
-if (typeof window !== "undefined") {
+// Form Inputs
   const backgroundInput = document.getElementById("backgroundInput");
   const surfaceInput = document.getElementById("surfaceInput");
   const borderInput = document.getElementById("borderInput");
@@ -14,10 +14,15 @@ if (typeof window !== "undefined") {
   const onSecondaryInput = document.getElementById("onSecondaryInput");
   const rootTheme = document.querySelector(":root");
 
+  // Color scheme options
+  const schAnalogous = document.getElementById('analogous');
+  const schComplement = document.getElementById('splitcomplement');
+  const schTriad = document.getElementById('triad');
+  const schTetrad = document.getElementById('tetrad');
+
+  // Forms
   const form = document.getElementById("hexCodeForm");
   const formRandom = document.getElementById("randomize");
-
-  // Text field inputs
 
   // Color swatches
   const p200Text = document.getElementById("swatch1T");
@@ -47,8 +52,8 @@ if (typeof window !== "undefined") {
 
   const fontName = document.getElementById("fontName");
 
-  // Forms
-
+  // Arrays
+  const schemes = [schAnalogous, schComplement, schTriad, schTetrad]
   const fonts = [crimsonPro, fraunces, grenze, montserrat, museoModerno, nunito, poppins, quicksand, roboto];
 
   form.addEventListener("submit", (event) => {
@@ -108,6 +113,7 @@ if (typeof window !== "undefined") {
   var primaryCol = "";
   var primaryLight = "";
   var primaryDark = "";
+  
   function generateColor() {
     // Generate a random color in hexadecimal format
     var pColor = tinycolor.random().toHexString();
@@ -152,8 +158,9 @@ if (typeof window !== "undefined") {
       console.log("Darkened Color: " + primaryColConfirm);
     }
     // Split complementary color scheme maker
-    let splitComp = tinycolor(primaryColConfirm).analogous();
-    const secondaryCol = splitComp[1].toHexString();
+    let splitComp = tinycolor(primaryColConfirm).splitcomplement();
+    console.log(splitComp);
+    let secondaryCol = splitComp[1].toHexString();
     let surfaceCol = splitComp[2].toHexString();
     console.log("Secondary Color: " + secondaryCol);
     console.log("Surface Color: " + surfaceCol);
@@ -204,10 +211,19 @@ if (typeof window !== "undefined") {
     s500Input.value = secondaryCol;
     s700Input.value = secondaryDark;
   }
-
+  var colorSchemeConfirm = undefined;
   formRandom.addEventListener("submit", (event) => {
     event.preventDefault();
     console.log("\u001b[34;1m -------\u001b[35;1mNEW-RANDOM\u001b[34;1m-------");
-    generateColor();
+    for (let i = 0; i < schemes.length; i++) {
+      const colScheme = schemes[i];
+      console.log(schemes[i]);
+      if (colScheme.checked === true) {
+        colorSchemeConfirm = colScheme.value;
+        console.log(colorSchemeConfirm);
+        generateColor();
+      }
+    }
+    
   });
-}
+
