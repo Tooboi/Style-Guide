@@ -112,14 +112,45 @@ form.addEventListener("submit", (event) => {
 });
 var primaryCol = "";
 var primaryLight = "";
+var primaryDark = "";
 function generateColor() {
   // Generate a random color in hexadecimal format
-  const color = tinycolor.random()
+  const pColor = tinycolor.random().toHexString()
 
-  primaryCol = tinycolor(color)._originalInput;
-  primaryLight = tinycolor(primaryCol).lighten(20).toHexString();
-  console.log(primaryCol);
-  console.log(primaryLight);
+  primaryCol = tinycolor(pColor)._originalInput;
+  primaryLight = tinycolor(primaryCol).lighten(15).toHexString();
+  primaryDark = tinycolor(primaryCol).darken(15).toHexString();
+  // rootTheme.style.setProperty("--col-bg", background);
+  // rootTheme.style.setProperty("--col-surface", surface);
+  // rootTheme.style.setProperty("--col-surface2", border);
+  rootTheme.style.setProperty("--col-p-200", primaryLight);
+  rootTheme.style.setProperty("--col-p-500", primaryCol);
+  rootTheme.style.setProperty("--col-p-700", primaryDark);
+  // rootTheme.style.setProperty("--col-s-200", s200);
+  // rootTheme.style.setProperty("--col-s-500", s500);
+  // rootTheme.style.setProperty("--col-s-700", s700);
+  // rootTheme.style.setProperty("--col-on-bg", onBackground);
+  // rootTheme.style.setProperty("--col-on-surface", onSurface);
+  // rootTheme.style.setProperty("--col-on-primary", onPrimary);
+  // rootTheme.style.setProperty("--col-on-secondary", onSecondary);
+
+  p200Text.innerText = primaryLight;
+  p500Text.innerText = primaryCol;
+  p700Text.innerText = primaryDark;
+  // s200Text.innerText = s200;
+  // s500Text.innerText = s500;
+  // s700Text.innerText = s700;
+  // backgroundText.innerText = background;
+  // surfaceText.innerText = surface;
+  // borderText.innerText = border;
+  // onBackgroundText.innerText = onBackground;
+  // onSurfaceText.innerText = onSurface;
+  // onPrimaryText.innerText = onPrimary;
+  // onSecondaryText.innerText = onSecondary;
+
+  p200Input.value = primaryLight;
+  p500Input.value = primaryCol;
+  p700Input.value = primaryDark;
 }
 
 formRandom.addEventListener("submit", (event) => {
