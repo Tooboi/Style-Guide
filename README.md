@@ -3,6 +3,7 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/tooboi/style-guide?color=yellow)
 ![GitHub language count](https://img.shields.io/github/languages/count/tooboi/style-guide?color=yellow)
 ![GitHub](https://img.shields.io/github/license/tooboi/style-guide?color=yellow)
+![GitHub issues](https://img.shields.io/github/issues/tooboi/style-guide?color=yellow)
 
 ## Description
 
