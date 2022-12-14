@@ -18,6 +18,21 @@ let onSecondaryInput;
 let rootTheme;
 
 
+const emptyColors = () => {
+  
+}
+
+
+const postColors = (color) =>
+
+  fetch('/api/color', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(color),
+  })
+
 if (typeof window !== 'undefined') {
   backgroundInput = document.getElementById("backgroundInput");
   surfaceInput = document.getElementById("surfaceInput");
