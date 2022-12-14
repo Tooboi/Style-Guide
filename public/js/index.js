@@ -2,52 +2,38 @@
 // const tinycolor = require("./tinycolor");
 
 
-let backgroundInput;
-let surfaceInput;
-let borderInput;
-let p200Input;
-let p500Input;
-let p700Input;
-let s200Input;
-let s500Input;
-let s700Input;
-let onBackgroundInput;
-let onSurfaceInput;
-let onPrimaryInput;
-let onSecondaryInput;
-let rootTheme;
+// let backgroundInput;
+// let surfaceInput;
+// let borderInput;
+// let p200Input;
+// let p500Input;
+// let p700Input;
+// let s200Input;
+// let s500Input;
+// let s700Input;
+// let onBackgroundInput;
+// let onSurfaceInput;
+// let onPrimaryInput;
+// let onSecondaryInput;
+// let rootTheme;
 
 
-const emptyColors = () => {
-  
-}
-
-
-const postColors = (color) =>
-
-  fetch('/api/color', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(color),
-  })
 
 if (typeof window !== 'undefined') {
-  backgroundInput = document.getElementById("backgroundInput");
-  surfaceInput = document.getElementById("surfaceInput");
-  borderInput = document.getElementById("borderInput");
-  p200Input = document.getElementById("p200Input");
-  p500Input = document.getElementById("p500Input");
-  p700Input = document.getElementById("p700Input");
-  s200Input = document.getElementById("s200Input");
-  s500Input = document.getElementById("s500Input");
-  s700Input = document.getElementById("s700Input");
-  onBackgroundInput = document.getElementById("onBackgroundInput");
-  onSurfaceInput = document.getElementById("onSurfaceInput");
-  onPrimaryInput = document.getElementById("onPrimaryInput");
-  onSecondaryInput = document.getElementById("onSecondaryInput");
-  rootTheme = document.querySelector(":root");
+  const backgroundInput = document.getElementById("backgroundInput");
+  const surfaceInput = document.getElementById("surfaceInput");
+  const borderInput = document.getElementById("borderInput");
+  const p200Input = document.getElementById("p200Input");
+  const p500Input = document.getElementById("p500Input");
+  const p700Input = document.getElementById("p700Input");
+  const s200Input = document.getElementById("s200Input");
+  const s500Input = document.getElementById("s500Input");
+  const s700Input = document.getElementById("s700Input");
+  const onBackgroundInput = document.getElementById("onBackgroundInput");
+  const onSurfaceInput = document.getElementById("onSurfaceInput");
+  const onPrimaryInput = document.getElementById("onPrimaryInput");
+  const onSecondaryInput = document.getElementById("onSecondaryInput");
+  const rootTheme = document.querySelector(":root");
   
 
 
