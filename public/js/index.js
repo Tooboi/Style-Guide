@@ -114,7 +114,7 @@
   var primaryLight = "";
   var primaryDark = "";
   
-  function generateColor() {
+  function generateColor(colorSchemeConfirm) {
     // Generate a random color in hexadecimal format
     var pColor = tinycolor.random().toHexString();
     // Get luminance
@@ -157,11 +157,27 @@
       primaryColConfirm = tinycolor(primaryCol).darken(25).toHexString();
       console.log("Darkened Color: " + primaryColConfirm);
     }
+
     // Split complementary color scheme maker
-    let splitComp = tinycolor(primaryColConfirm).splitcomplement();
-    console.log(splitComp);
-    let secondaryCol = splitComp[1].toHexString();
+    var splitComp = tinycolor(primaryColConfirm).splitcomplement();
+
+    console.log("splitComp: " + splitComp);
+    if (colorSchemeConfirm === "analogous") {
+      splitComp = tinycolor(primaryColConfirm).analogous();
+    } 
+    if (colorSchemeConfirm === "splitcomplement") {
+      splitComp = tinycolor(primaryColConfirm).splitcomplement();
+    } 
+    if (colorSchemeConfirm === "triad") {
+      splitComp = tinycolor(primaryColConfirm).triad();
+    } 
+    if (colorSchemeConfirm === "tetrad") {
+      splitComp = tinycolor(primaryColConfirm).tetrad();
+    } 
+
+    let secondaryCol = splitComp[1].toHexString()
     let surfaceCol = splitComp[2].toHexString();
+
     console.log("Secondary Color: " + secondaryCol);
     console.log("Surface Color: " + surfaceCol);
 
@@ -211,17 +227,20 @@
     s500Input.value = secondaryCol;
     s700Input.value = secondaryDark;
   }
-  var colorSchemeConfirm = undefined;
+  // var splitComp = tinycolor(primaryColConfirm).splitcomplement();
   formRandom.addEventListener("submit", (event) => {
     event.preventDefault();
+
     console.log("\u001b[34;1m -------\u001b[35;1mNEW-RANDOM\u001b[34;1m-------");
+
     for (let i = 0; i < schemes.length; i++) {
       const colScheme = schemes[i];
       console.log(schemes[i]);
+
       if (colScheme.checked === true) {
-        colorSchemeConfirm = colScheme.value;
-        console.log(colorSchemeConfirm);
-        generateColor();
+        var colorSchemeConfirm = colScheme.value;
+        console.log("colorSchemeConfirm: " + colorSchemeConfirm);
+        generateColor(colorSchemeConfirm);
       }
     }
     
