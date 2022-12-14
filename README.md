@@ -14,7 +14,7 @@
 
 ## Deployment
 
-Use the following link to visit this style guide: [Following Link](https://infinite-escarpment-56422.herokuapp.com/)
+Use the following link to visit this style guide: [Following Link](https://tooboi.github.io/Style-Guide/)
 
 ![screenshot of web page](/public/images/Demo.png)
 
