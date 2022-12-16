@@ -1,0 +1,59 @@
+:root {
+    --ff: "Nunito", sans-serif;
+  
+    /* font-family: "Alumni Sans", sans-serif;
+    font-family: "Fraunces", serif;
+    font-family: "Grenze", serif;
+    font-family: "Montserrat", sans-serif;
+    font-family: "MuseoModerno", cursive;
+    font-family: "Nunito", sans-serif;
+    font-family: "Roboto", sans-serif; */
+  
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+    --fw-black: 900;
+  
+    --line-2: 0.125rem;
+    --line-4: 1.25rem;
+  
+    --col-bg: #254643;
+    /* element bg */
+    --col-surface: #316d69;
+    /* one level up */
+    --col-surface2: #498884;
+    /* primary colors */
+    --col-p-200: #f5efc6;
+    --col-p-500: #e7d76f;
+    --col-p-700: #dbca57;
+    /* secondary colors */
+    --col-s-200: #c6e6f5;
+    --col-s-500: #6fbfe7;
+    --col-s-700: #57afdb;
+  
+    /* text colors */
+    --col-on-bg: #c6ccdf;
+    --col-on-surface: #cbd0e6;
+    --col-on-primary: #1a1b26;
+    --col-on-secondary: #1a1b26;
+  }
+  body {
+    background-color: var(--col-bg);
+    color: var(--col-on-surface);
+  
+    font-family: var(--ff);
+  }
+  .custom-nav {
+    background-color: var(--col-p-500);
+  }
+  .custom-btn {
+    color: var(--col-on-primary);
+    background-color: var(--col-p-500);
+    border-color: var(--col-surface2);
+  }
+  .custom-btn2 {
+    color: var(--col-on-secondary);
+    background-color: var(--col-s-500);
+    border-color: var(--col-surface2);
+  }

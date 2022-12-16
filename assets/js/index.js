@@ -227,7 +227,6 @@
     s500Input.value = secondaryCol;
     s700Input.value = secondaryDark;
   }
-  // var splitComp = tinycolor(primaryColConfirm).splitcomplement();
   formRandom.addEventListener("submit", (event) => {
     event.preventDefault();
 
@@ -245,4 +244,3 @@
     }
     
   });
-
