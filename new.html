@@ -21,20 +21,42 @@
   <body>
     <nav class="navbar navbar-expand-sm custom-nav sticky-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">UI Style Guide</a>
+        <a class="navbar-brand" href="#"><b>UI Style Guide</b></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-          <form class="d-flex" role="search">
+          
             <div class="dropdown mx-2">
               <button class="btn custom-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Color Palette</button>
+              <!-- Color Palette Form -->
+              <form class="d-flex" id="randomize">
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Analogous</a></li>
-                <li><a class="dropdown-item" href="#">Triadic</a></li>
-                <li><a class="dropdown-item" href="#">Tetradic</a></li>
-                <li><a class="dropdown-item" href="#">Split Complementary</a></li>
+                <li class="dropdown-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="analogous" name="flexRadioDefault" id="analogous" checked/>
+                    <label class="form-check-label" for="analogous"> Analogous </label>
+                  </div>
+                </li>
+                <li class="dropdown-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="triad" name="flexRadioDefault" id="triad" />
+                    <label class="form-check-label" for="triad"> Triadic </label>
+                  </div>
+                </li>
+                <li class="dropdown-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="tetrad" name="flexRadioDefault" id="tetrad" />
+                    <label class="form-check-label" for="tetrad"> Tetradic </label>
+                  </div>
+                </li>
+                <li class="dropdown-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="splitcomplement" name="flexRadioDefault" id="splitcomplement" />
+                    <label class="form-check-label" for="splitcomplement"> Split Complementary </label>
+                  </div>
+                </li>
               </ul>
             </div>
 
@@ -44,207 +66,214 @@
       </div>
     </nav>
     <main>
+      <form id="hexCodeForm">
       <div class="container-fluid">
         <div class="row">
-          <div class="accordion accordion-flush col-12 col-sm-3 p-0" id="accordionFlushExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingOne">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Layout</button>
-              </h2>
-              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                  <div class="mb-3">
-                    <label for="backgroundInput" class="form-label">Background</label>
-                    <div class="input-group">
-                      <span class="input-group-text" id="inputGroupPrepend"><i class="bii fa-solid fa-square"></i></span>
-                      <input type="text" class="form-control" id="backgroundInput" placeholder="#f5efc6" value="#f5efc6" />
+          <!-- SIDE NAVIGATION -->
+          
+
+            <div class="accordion accordion-flush col-12 col-sm-3 p-0" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Layout</button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <div class="mb-3">
+                      <label for="backgroundInput" class="form-label">Background</label>
+                      <div class="input-group">
+                        <span class="input-group-text" id="inputGroupPrepend"><i class="bii fa-solid fa-square"></i></span>
+                        <input type="text" class="form-control" id="backgroundInput" placeholder="#f5efc6" value="#f5efc6" />
+                      </div>
+                    </div>
+  
+                    <div class="mb-3">
+                      <label for="surfaceInput" class="form-label">Surface</label>
+                      <div class="input-group">
+                        <span class="input-group-text" id="inputGroupPrepend"><i class="sii fa-solid fa-clone"></i></span>
+                        <input type="text" class="form-control" id="surfaceInput" placeholder="#e7d76f" value="#e7d76f" />
+                      </div>
+                    </div>
+  
+                    <div class="mb-3">
+                      <label for="borderInput" class="form-label">Border</label>
+                      <div class="input-group">
+                        <span class="input-group-text2" id="inputGroupPrepend"><i class="boi fa-regular fa-square"></i></span>
+                        <input type="text" class="form-control" id="borderInput" placeholder="#dbca57" value="#dbca57" />
+                      </div>
                     </div>
                   </div>
-
-                  <div class="mb-3">
-                    <label for="surfaceInput" class="form-label">Surface</label>
-                    <div class="input-group">
-                      <span class="input-group-text" id="inputGroupPrepend"><i class="sii fa-solid fa-clone"></i></span>
-                      <input type="text" class="form-control" id="surfaceInput" placeholder="#e7d76f" value="#e7d76f" />
+                </div>
+              </div>
+  
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">Primary</button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <div class="mb-3">
+                      <label for="p200Input" class="form-label">Primary 200</label>
+                      <div class="input-group">
+                        <span class="input-group-text" id="inputGroupPrepend"><i class="p2 fa-solid fa-circle-half-stroke"></i></span>
+                        <input type="text" class="form-control" id="p200Input" placeholder="#f5efc6" value="#f5efc6" />
+                      </div>
+                    </div>
+  
+                    <div class="mb-3">
+                      <label for="p500Input" class="form-label">Primary 500</label>
+                      <div class="input-group">
+                        <span class="input-group-text" id="inputGroupPrepend"><i class="p5 fa-solid fa-circle-half-stroke"></i></span>
+                        <input type="text" class="form-control" id="p500Input" placeholder="#e7d76f" value="#e7d76f" />
+                      </div>
+                    </div>
+  
+                    <div class="mb-3">
+                      <label for="p700Input" class="form-label">Primary 700</label>
+                      <div class="input-group">
+                        <span class="input-group-text" id="inputGroupPrepend"><i class="p7 fa-solid fa-circle-half-stroke"></i></span>
+                        <input type="text" class="form-control" id="p700Input" placeholder="#dbca57" value="#dbca57" />
+                      </div>
                     </div>
                   </div>
-
-                  <div class="mb-3">
-                    <label for="borderInput" class="form-label">Border</label>
-                    <div class="input-group">
-                      <span class="input-group-text2" id="inputGroupPrepend"><i class="boi fa-regular fa-square"></i></span>
-                      <input type="text" class="form-control" id="borderInput" placeholder="#dbca57" value="#dbca57" />
+                </div>
+              </div>
+  
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">Secondary</button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <div class="mb-3">
+                      <label for="s200Input" class="form-label">Secondary 200</label>
+                      <div class="input-group">
+                        <span class="input-group-text" id="inputGroupPrepend"><i class="s2 fa-solid fa-circle"></i></span>
+                        <input type="text" class="form-control" id="s200Input" placeholder="#f5efc6" value="#f5efc6" />
+                      </div>
+                    </div>
+  
+                    <div class="mb-3">
+                      <label for="s500Input" class="form-label">Secondary 500</label>
+                      <div class="input-group">
+                        <span class="input-group-text" id="inputGroupPrepend"><i class="s5 fa-solid fa-circle"></i></span>
+                        <input type="text" class="form-control" id="s500Input" placeholder="#e7d76f" value="#e7d76f" />
+                      </div>
+                    </div>
+  
+                    <div class="mb-3">
+                      <label for="s700Input" class="form-label">Secondary 700</label>
+                      <div class="input-group">
+                        <span class="input-group-text" id="inputGroupPrepend"><i class="s7 fa-solid fa-circle"></i></span>
+                        <input type="text" class="form-control" id="s700Input" placeholder="#dbca57" value="#dbca57" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">Text</button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <div class="mb-3">
+                      <label for="onBackgroundInput" class="form-label">Text on Background</label>
+                      <div class="input-group">
+                        <span class="input-group-text" id="inputGroupPrepend"><i class="tob fa-solid fa-font"></i></span>
+                        <input type="text" class="form-control" id="onBackgroundInput" placeholder="#f5efc6" value="#f5efc6" />
+                      </div>
+                    </div>
+  
+                    <div class="mb-3">
+                      <label for="onSurfaceInput" class="form-label">Text on Surface</label>
+                      <div class="input-group">
+                        <span class="input-group-text" id="inputGroupPrepend"><i class="tos fa-solid fa-font"></i></span>
+                        <input type="text" class="form-control" id="onSurfaceInput" placeholder="#e7d76f" value="#e7d76f" />
+                      </div>
+                    </div>
+  
+                    <div class="mb-3">
+                      <label for="onPrimaryInput" class="form-label">Text on Primary</label>
+                      <div class="input-group">
+                        <span class="input-group-text" id="inputGroupPrepend"><i class="topp fa-solid fa-font"></i></span>
+                        <input type="text" class="form-control" id="onPrimaryInput" placeholder="#dbca57" value="#dbca57" />
+                      </div>
+                    </div>
+  
+                    <div class="mb-3">
+                      <label for="onSecondaryInput" class="form-label">Text on Secondary</label>
+                      <div class="input-group">
+                        <span class="input-group-text" id="inputGroupPrepend"><i class="to2 fa-solid fa-font"></i></span>
+                        <input type="text" class="form-control" id="onSecondaryInput" placeholder="#e7d76f" value="#e7d76f" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">Font Family</button>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                  <!-- <div class="accordion-body">
+                    <div class="mb-3">
+                      <label for="backgroundInput" class="form-label">Background</label>
+                      <div class="input-group">
+                        <span class="input-group-text" id="inputGroupPrepend"><i class="bii fa-solid fa-square"></i></span>
+                        <input type="text" class="form-control" id="backgroundInput" placeholder="#f5efc6" value="#f5efc6" />
+                      </div>
+                    </div>
+  
+                    <div class="mb-3">
+                      <label for="surfaceInput" class="form-label">Surface</label>
+                      <div class="input-group">
+                        <span class="input-group-text" id="inputGroupPrepend"><i class="sii fa-solid fa-clone"></i></span>
+                        <input type="text" class="form-control" id="surfaceInput" placeholder="#e7d76f" value="#e7d76f" />
+                      </div>
+                    </div>
+  
+                    <div class="mb-3">
+                      <label for="borderInput" class="form-label">Border</label>
+                      <div class="input-group">
+                        <span class="input-group-text" id="inputGroupPrepend"><i class="boi fa-regular fa-square"></i></span>
+                        <input type="text" class="form-control" id="borderInput" placeholder="#dbca57" value="#dbca57" />
+                      </div>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+  
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">Instructions</button>
+                </h2>
+                <div id="flush-collapseSix" class="accordion-collapse collapse show" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <div class="mb-3">
+                      <p>Input colors and see this page change</p>
+                      <p>Randomize button will generate a random palette</p>
+                      <br />
+                      <p>200 is lighter than 500</p>
+                      <p>500 is a rich mid-tone</p>
+                      <p>700 is darker than 500</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            
+          </form>
+          
 
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">Primary</button>
-              </h2>
-              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                  <div class="mb-3">
-                    <label for="p200Input" class="form-label">Primary 200</label>
-                    <div class="input-group">
-                      <span class="input-group-text" id="inputGroupPrepend"><i class="p2 fa-solid fa-circle-half-stroke"></i></span>
-                      <input type="text" class="form-control" id="p200Input" placeholder="#f5efc6" value="#f5efc6" />
-                    </div>
-                  </div>
-
-                  <div class="mb-3">
-                    <label for="p500Input" class="form-label">Primary 500</label>
-                    <div class="input-group">
-                      <span class="input-group-text" id="inputGroupPrepend"><i class="p5 fa-solid fa-circle-half-stroke"></i></span>
-                      <input type="text" class="form-control" id="p500Input" placeholder="#e7d76f" value="#e7d76f" />
-                    </div>
-                  </div>
-
-                  <div class="mb-3">
-                    <label for="p700Input" class="form-label">Primary 700</label>
-                    <div class="input-group">
-                      <span class="input-group-text" id="inputGroupPrepend"><i class="p7 fa-solid fa-circle-half-stroke"></i></span>
-                      <input type="text" class="form-control" id="p700Input" placeholder="#dbca57" value="#dbca57" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">Secondary</button>
-              </h2>
-              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                  <div class="mb-3">
-                    <label for="s200Input" class="form-label">Secondary 200</label>
-                    <div class="input-group">
-                      <span class="input-group-text" id="inputGroupPrepend"><i class="s2 fa-solid fa-circle"></i></span>
-                      <input type="text" class="form-control" id="s200Input" placeholder="#f5efc6" value="#f5efc6" />
-                    </div>
-                  </div>
-
-                  <div class="mb-3">
-                    <label for="s500Input" class="form-label">Secondary 500</label>
-                    <div class="input-group">
-                      <span class="input-group-text" id="inputGroupPrepend"><i class="s5 fa-solid fa-circle"></i></span>
-                      <input type="text" class="form-control" id="s500Input" placeholder="#e7d76f" value="#e7d76f" />
-                    </div>
-                  </div>
-
-                  <div class="mb-3">
-                    <label for="s700Input" class="form-label">Secondary 700</label>
-                    <div class="input-group">
-                      <span class="input-group-text" id="inputGroupPrepend"><i class="s7 fa-solid fa-circle"></i></span>
-                      <input type="text" class="form-control" id="s700Input" placeholder="#dbca57" value="#dbca57" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingFour">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">Text</button>
-              </h2>
-              <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                  <div class="mb-3">
-                    <label for="onBackgroundInput" class="form-label">Text on Background</label>
-                    <div class="input-group">
-                      <span class="input-group-text" id="inputGroupPrepend"><i class="tob fa-solid fa-font"></i></span>
-                      <input type="text" class="form-control" id="onBackgroundInput" placeholder="#f5efc6" value="#f5efc6" />
-                    </div>
-                  </div>
-
-                  <div class="mb-3">
-                    <label for="onSurfaceInput" class="form-label">Text on Surface</label>
-                    <div class="input-group">
-                      <span class="input-group-text" id="inputGroupPrepend"><i class="tos fa-solid fa-font"></i></span>
-                      <input type="text" class="form-control" id="onSurfaceInput" placeholder="#e7d76f" value="#e7d76f" />
-                    </div>
-                  </div>
-
-                  <div class="mb-3">
-                    <label for="onPrimaryInput" class="form-label">Text on Primary</label>
-                    <div class="input-group">
-                      <span class="input-group-text" id="inputGroupPrepend"><i class="topp fa-solid fa-font"></i></span>
-                      <input type="text" class="form-control" id="onPrimaryInput" placeholder="#dbca57" value="#dbca57" />
-                    </div>
-                  </div>
-
-                  <div class="mb-3">
-                    <label for="onSecondaryInput" class="form-label">Text on Secondary</label>
-                    <div class="input-group">
-                      <span class="input-group-text" id="inputGroupPrepend"><i class="to2 fa-solid fa-font"></i></span>
-                      <input type="text" class="form-control" id="onSecondaryInput" placeholder="#e7d76f" value="#e7d76f" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingFive">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">Font Family</button>
-              </h2>
-              <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-                <!-- <div class="accordion-body">
-                  <div class="mb-3">
-                    <label for="backgroundInput" class="form-label">Background</label>
-                    <div class="input-group">
-                      <span class="input-group-text" id="inputGroupPrepend"><i class="bii fa-solid fa-square"></i></span>
-                      <input type="text" class="form-control" id="backgroundInput" placeholder="#f5efc6" value="#f5efc6" />
-                    </div>
-                  </div>
-
-                  <div class="mb-3">
-                    <label for="surfaceInput" class="form-label">Surface</label>
-                    <div class="input-group">
-                      <span class="input-group-text" id="inputGroupPrepend"><i class="sii fa-solid fa-clone"></i></span>
-                      <input type="text" class="form-control" id="surfaceInput" placeholder="#e7d76f" value="#e7d76f" />
-                    </div>
-                  </div>
-
-                  <div class="mb-3">
-                    <label for="borderInput" class="form-label">Border</label>
-                    <div class="input-group">
-                      <span class="input-group-text" id="inputGroupPrepend"><i class="boi fa-regular fa-square"></i></span>
-                      <input type="text" class="form-control" id="borderInput" placeholder="#dbca57" value="#dbca57" />
-                    </div>
-                  </div>
-                </div> -->
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="panelsStayOpen-headingSix">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">Instructions</button>
-              </h2>
-              <div id="flush-collapseSix" class="accordion-collapse collapse show" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-
-                  <div class="mb-3">
-                    <p>Input colors and see this page change</p>
-                    <p>Randomize button will generate a random palette</p>
-                    <br>
-                    <p>200 is lighter than 500</p>
-                    <p>500 is a rich mid-tone</p>
-                    <p>700 is darker than 500</p>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
+          <!-- MAIN PAGE BODY -->
           <div class="col">
             <div class="type-row col-12 mt-2">
               <div class="container-fluid text-center">
                 <!-- Typography Section -->
-                <h2>Type Area</h2>
+                <h2>Typography</h2>
               </div>
             </div>
 
@@ -268,9 +297,9 @@
         </div>
       </div>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.2/tinycolor.min.js" integrity="sha512-+aXA9mgbUvFe0ToTlbt8/3vT7+nOgUmFw29wfFCsGoh8AZMRSU0p4WtOvC1vkF2JBrndPN2TuNZsHPAKPPxe8Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="./assets/js/index.js"></script>
     <script type="text/javascript" src="./assets/js/tinycolor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.2/tinycolor.min.js" integrity="sha512-+aXA9mgbUvFe0ToTlbt8/3vT7+nOgUmFw29wfFCsGoh8AZMRSU0p4WtOvC1vkF2JBrndPN2TuNZsHPAKPPxe8Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </body>
 </html>
