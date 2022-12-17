@@ -35,7 +35,7 @@
               <ul class="dropdown-menu">
                 <li class="dropdown-item">
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" value="analogous" name="flexRadioDefault" id="analogous" checked/>
+                    <input class="form-check-input" type="radio" value="analogous" name="flexRadioDefault" id="analogous" />
                     <label class="form-check-label" for="analogous"> Analogous </label>
                   </div>
                 </li>
@@ -47,7 +47,7 @@
                 </li>
                 <li class="dropdown-item">
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" value="tetrad" name="flexRadioDefault" id="tetrad" />
+                    <input class="form-check-input" type="radio" value="tetrad" name="flexRadioDefault" id="tetrad" checked/>
                     <label class="form-check-label" for="tetrad"> Tetradic </label>
                   </div>
                 </li>
@@ -218,37 +218,20 @@
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">Font Family</button>
                 </h2>
                 <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-                  <!-- <div class="accordion-body">
-                    <div class="mb-3">
-                      <label for="backgroundInput" class="form-label">Background</label>
-                      <div class="input-group">
-                        <span class="input-group-text" id="inputGroupPrepend"><i class="bii fa-solid fa-square"></i></span>
-                        <input type="text" class="form-control" id="backgroundInput" placeholder="#f5efc6" value="#f5efc6" />
-                      </div>
-                    </div>
-  
-                    <div class="mb-3">
-                      <label for="surfaceInput" class="form-label">Surface</label>
-                      <div class="input-group">
-                        <span class="input-group-text" id="inputGroupPrepend"><i class="sii fa-solid fa-clone"></i></span>
-                        <input type="text" class="form-control" id="surfaceInput" placeholder="#e7d76f" value="#e7d76f" />
-                      </div>
-                    </div>
-  
-                    <div class="mb-3">
-                      <label for="borderInput" class="form-label">Border</label>
-                      <div class="input-group">
-                        <span class="input-group-text" id="inputGroupPrepend"><i class="boi fa-regular fa-square"></i></span>
-                        <input type="text" class="form-control" id="borderInput" placeholder="#dbca57" value="#dbca57" />
-                      </div>
-                    </div>
-                  </div> -->
+                  <div class="btn-group-vertical d-flex justify-content-center m-4" role="group" aria-label="Vertical radio toggle button group">
+                    <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+                    <label class="btn custom-btn3 " for="vbtn-radio1">Nunito</label>
+                    <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+                    <label class="btn custom-btn3 " for="vbtn-radio2">Montserrat</label>
+                    <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+                    <label class="btn custom-btn3 " for="vbtn-radio3">Quicksand</label>
+                  </div>
                 </div>
               </div>
   
               <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingSix">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">Instructions</button>
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">Tips</button>
                 </h2>
                 <div id="flush-collapseSix" class="accordion-collapse collapse show" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body">
@@ -270,10 +253,94 @@
 
           <!-- MAIN PAGE BODY -->
           <div class="col">
-            <div class="type-row col-12 mt-2">
+            <div class="type-row col-12 my-3 pb-3">
+              <!-- Typography Section -->
               <div class="container-fluid text-center">
-                <!-- Typography Section -->
-                <h2>Typography</h2>
+                <h2 class="py-2 pt-3 titleH2">Typography</h2>
+                <section class="weight d-flex flex-wrap justify-content-evenly">
+                  <figure class="col mx-2">
+                    <div class="top">
+                      <div class=" position-relative">
+                        <div class="corner position-absolute top-0 end-0">
+                          <h6 class="px-1 pt-1 m-0">300</h6>
+                        </div>
+                      </div>
+                      <h1 class="display-3 mb-0" id="top1">Aa</h1>
+                    </div>
+                    <div class="bottom">
+                      <h4 class="mb-0 py-1">LIGHT</h4>
+                    </div>
+                  </figure>
+                  <figure class="col mx-2">
+                    <div class="top">
+                      <div class=" position-relative">
+                        <div class="corner position-absolute top-0 end-0">
+                          <h6 class="px-1 pt-1 m-0">400</h6>
+                        </div>
+                      </div>
+                      <h1 class="display-3 mb-0" id="top2">Aa</h1>
+                    </div>
+                    <div class="bottom">
+                      <h4 class="mb-0 py-1">REGULAR</h4>
+                    </div>
+                  </figure>
+                  <figure class="col mx-2">
+                    <div class="top">
+                      <div class=" position-relative">
+                        <div class="corner position-absolute top-0 end-0">
+                          <h6 class="px-1 pt-1 m-0">500</h6>
+                        </div>
+                      </div>
+                      <h1 class="display-3 mb-0" id="top3">Aa</h1>
+                    </div>
+                    <div class="bottom">
+                      <h4 class="mb-0 py-1">MEDIUM</h4>
+                    </div>
+                  </figure>
+                  <figure class="col mx-2">
+                    <div class="top">
+                      <div class=" position-relative">
+                        <div class="corner position-absolute top-0 end-0">
+                          <h6 class="px-1 pt-1 m-0">700</h6>
+                        </div>
+                      </div>
+                      <h1 class="display-3 mb-0" id="top4">Aa</h1>
+                    </div>
+                    <div class="bottom">
+                      <h4 class="mb-0 py-1">BOLD</h4>
+                    </div>
+                  </figure>
+                  <figure class="col mx-2">
+                    <div class="top">
+                      <div class=" position-relative">
+                        <div class="corner position-absolute top-0 end-0">
+                          <h6 class="px-1 pt-1 m-0">900</h6>
+                        </div>
+                      </div>
+                      <h1 class="display-3 mb-0" id="top5">Aa</h1>
+                    </div>
+                    <div class="bottom">
+                      <h4 class="mb-0 py-1">BLACK</h4>
+                    </div>
+                  </figure>
+                </section>
+                <section class="p-2 lowerType d-flex flex-nowrap justify-content-evenly">
+                  <div class="achOnes col d-flex flex-nowrap flex-column justify-content-evenly">
+                    <h1>H1 Heading</h1>
+                    <h2>H2 Heading</h2>
+                    <h3>H3 Heading</h3>
+                  </div>
+                  <div class="achTwos col d-flex flex-nowrap flex-column justify-content-evenly">
+                    <h4>H4 Heading</h4>
+                    <h5>H5 Heading</h5>
+                    <h6>H6 Heading</h6>
+                  </div>
+                  <div class="para col d-flex flex-nowrap flex-column justify-content-evenly">
+                    <p class="text-start">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum rem maiores corporis facilis dolore, ut fugiat unde deserunt maxime.
+                    </p>
+                  </div>
+                </section>
               </div>
             </div>
 
