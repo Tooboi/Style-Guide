@@ -1,3 +1,5 @@
+
+
 // Form Inputs
   const backgroundInput = document.getElementById("backgroundInput");
   const surfaceInput = document.getElementById("surfaceInput");
@@ -21,8 +23,9 @@
   const schTetrad = document.getElementById('tetrad');
 
   // Forms
-  const form = document.getElementById("hexCodeForm");
+  const formLayout = document.getElementById("formLayout");
   const formRandom = document.getElementById("randomize");
+  const formFonts = document.getElementById("formFonts");
 
   // Color swatches
   const p200Text = document.getElementById("swatch1T");
@@ -40,23 +43,25 @@
   const onSecondaryText = document.getElementById("swatch10T");
 
   // Font inputs
-  const crimsonPro = document.getElementById("crimsonPro");
+  // const crimsonPro = document.getElementById("crimsonPro");
   const fraunces = document.getElementById("fraunces");
-  const grenze = document.getElementById("grenze");
+  // const grenze = document.getElementById("grenze");
   const montserrat = document.getElementById("montserrat");
-  const museoModerno = document.getElementById("museoModerno");
+  // const museoModerno = document.getElementById("museoModerno");
   const nunito = document.getElementById("nunito");
   const poppins = document.getElementById("poppins");
   const quicksand = document.getElementById("quicksand");
   const roboto = document.getElementById("roboto");
 
-  const fontName = document.getElementById("fontName");
+  const fontName = document.getElementById("fontType");
 
   // Arrays
   const schemes = [schAnalogous, schComplement, schTriad, schTetrad]
-  const fonts = [crimsonPro, fraunces, grenze, montserrat, museoModerno, nunito, poppins, quicksand, roboto];
+  const fonts = [fraunces, montserrat, nunito, poppins, quicksand, roboto];
 
-  form.addEventListener("submit", (event) => {
+
+
+  formLayout.addEventListener("change", (event) => {
     event.preventDefault();
     const background = backgroundInput.value;
     const surface = surfaceInput.value;
@@ -100,20 +105,9 @@
     onPrimaryText.innerText = onPrimary;
     onSecondaryText.innerText = onSecondary;
 
-    for (let i = 0; i < fonts.length; i++) {
-      const current = fonts[i];
-      if (current.checked === true) {
-        let fontFamily = current.value;
-        console.log(fontFamily.replace(/['"]+/g, ""));
-        rootTheme.style.setProperty("--ff", fontFamily);
-        fontName.innerText = fontFamily.replace(/['"]+/g, "");
-      }
-    }
+    
   });
 
-  // if (condition) {
-    
-  // }
 
   var primaryCol = "";
   var primaryLight = "";
@@ -209,15 +203,15 @@
     // rootTheme.style.setProperty("--col-on-primary", onPrimary);
     // rootTheme.style.setProperty("--col-on-secondary", onSecondary);
 
-    p200Text.innerText = primaryLight;
-    p500Text.innerText = primaryColConfirm;
-    p700Text.innerText = primaryDark;
-    s200Text.innerText = secondaryLight;
-    s500Text.innerText = secondaryCol;
-    s700Text.innerText = secondaryDark;
-    backgroundText.innerText = backgroundCol;
-    surfaceText.innerText = surfaceCol;
-    borderText.innerText = borderCol;
+    // p200Text.innerText = primaryLight;
+    // p500Text.innerText = primaryColConfirm;
+    // p700Text.innerText = primaryDark;
+    // s200Text.innerText = secondaryLight;
+    // s500Text.innerText = secondaryCol;
+    // s700Text.innerText = secondaryDark;
+    // backgroundText.innerText = backgroundCol;
+    // surfaceText.innerText = surfaceCol;
+    // borderText.innerText = borderCol;
     // onBackgroundText.innerText = onBackground;
     // onSurfaceText.innerText = onSurface;
     // onPrimaryText.innerText = onPrimary;
@@ -232,6 +226,7 @@
     s500Input.value = secondaryCol;
     s700Input.value = secondaryDark;
   }
+
   formRandom.addEventListener("submit", (event) => {
     event.preventDefault();
 
@@ -248,4 +243,18 @@
       }
     }
     
+  });
+
+  formFonts.addEventListener("change", (event) => {
+    event.preventDefault();
+    for (let i = 0; i < fonts.length; i++) {
+      const current = fonts[i];
+      if (current.checked === true) {
+        let fontFamily = current.value;
+        console.log(fontFamily.charAt(0).toUpperCase() + fontFamily.slice(1));
+        rootTheme.style.setProperty("--ff", fontFamily);
+        fontName.innerText = fontFamily.charAt(0).toUpperCase() + fontFamily.slice(1).replace(/['"]+/g, "");
+      }
+    }
+  
   });

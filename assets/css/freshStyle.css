@@ -1,13 +1,6 @@
 :root {
   --ff: 'Nunito', sans-serif;
 
-  /* font-family: "Alumni Sans", sans-serif;
-    font-family: "Fraunces", serif;
-    font-family: "Grenze", serif;
-    font-family: "Montserrat", sans-serif;
-    font-family: "MuseoModerno", cursive;
-    font-family: "Nunito", sans-serif;
-    font-family: "Roboto", sans-serif; */
   --border-radius: 0.4rem;
   --border-radius-form: 0.25rem;
 
@@ -45,6 +38,10 @@ body {
   color: var(--col-on-surface);
   width: 100vw;
   font-family: var(--ff);
+}
+.navbar-brand {
+text-decoration: none;
+color: var(--col-on-primary);
 }
 .custom-nav {
   background-color: var(--col-p-500);
@@ -274,9 +271,34 @@ body {
   --bs-accordion-active-color: var(--col-on-surface);
   --bs-accordion-active-bg: var(--col-surface2);
 }
+.btn-check:focus+.btn, .btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 109, 253, 0);
+}
+.accordion-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  color: var(--col-on-surface);
+  text-align: left;
+  background-color: var(--col-surface);
+  border: 0;
+  border-radius: 0;
+  overflow-anchor: none;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,border-radius .15s ease;
+}
+.accordion-button:focus {
+  z-index: 3;
+  border-color: var(--col-surface2);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(0 0 0 / 0%);
+}
 .accordion-item {
   color: var(--col-on-background);
-  background-color: var(--col-bg);
+  background-color: var(--col-surface);
   border: var(--bs-accordion-border-width) solid var(--col-surface2);
 }
 .accordion-button:not(.collapsed)::after {
@@ -291,7 +313,7 @@ body {
 }
 .accordion-flush .accordion-item .accordion-button,
 .accordion-flush .accordion-item .accordion-button:not(.collapsed) {
-  border-bottom-right-radius: var(--border-radius);
+  /* border-bottom-right-radius: var(--border-radius); */
 }
 :focus-visible {
   outline: var(--col-surface2) auto 1px;
@@ -346,6 +368,7 @@ body {
 }
 .corner {
   background-color: var(--col-surface2);
+  overflow: hidden;
 }
 figure h6 {
   border-bottom: var(--line-2) solid var(--col-surface2);
