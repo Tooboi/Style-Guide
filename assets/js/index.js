@@ -194,12 +194,15 @@ function generateColor(colorSchemeConfirm) {
 
   // Make darker and lighter version
   primaryLight = tinycolor(primaryColConfirm).desaturate(20).lighten(15).toHexString();
-  primaryDark = tinycolor(primaryColConfirm).desaturate(10).darken(15).toHexString();
+  primaryDark = tinycolor(primaryColConfirm).desaturate(2).darken(18).toHexString();
   const secondaryLight = tinycolor(secondaryCol).desaturate(20).lighten(15).toHexString();
-  const secondaryDark = tinycolor(secondaryCol).desaturate(10).darken(15).toHexString();
+  const secondaryDark = tinycolor(secondaryCol).desaturate(2).darken(18).toHexString();
   surfaceCol = tinycolor(surfaceCol).desaturate(40).darken(30).toHexString();
   const backgroundCol = tinycolor(surfaceCol).darken(10).toHexString();
   const borderCol = tinycolor(surfaceCol).lighten(15).toHexString();
+
+  const p500vsSurface = tinycolor.readability(surfaceCol, primaryColConfirm);
+  console.log("Primary 500 v Surface Contrast Ratio: ", p500vsSurface);
 
   rootTheme.style.setProperty('--col-bg', backgroundCol);
   rootTheme.style.setProperty('--col-surface', surfaceCol);
