@@ -47,6 +47,9 @@ body {
 ::-webkit-scrollbar {
   width: 0px;
 }
+.custom-nav {
+  background-color: var(--col-p-500);
+}
 h1 {
   font-size: 2.125rem;
 }
