@@ -28,7 +28,6 @@
   --col-s-700: #57afdb;
 
   /* text colors */
-  --col-on-bg: #c6ccdf;
   --col-on-surface: #cbd0e6;
   --col-on-primary: #1a1b26;
   --col-on-secondary: #1a1b26;
@@ -36,12 +35,14 @@
 body {
   background-color: var(--col-bg);
   color: var(--col-on-surface);
-  width: 100vw;
   font-family: var(--ff);
 }
+::-webkit-scrollbar {
+  width: 0px;
+}
 .navbar-brand {
-text-decoration: none;
-color: var(--col-on-primary);
+  text-decoration: none;
+  color: var(--col-on-primary);
 }
 .custom-nav {
   background-color: var(--col-p-500);
@@ -52,7 +53,7 @@ color: var(--col-on-primary);
   background-color: rgba(0, 0, 0, 0.15);
 }
 .dropdown-menu {
-  background-color: var(--col-on-bg);
+  background-color: var(--col-on-surface);
 }
 .btn {
   --bs-btn-padding-x: 0.75rem;
@@ -138,7 +139,7 @@ color: var(--col-on-primary);
   color: var(--col-on-secondary);
 }
 .custom-btn3 {
-  color: var(--col-on-bg);
+  color: var(--col-on-surface);
   background-color: var(--col-bg);
   border-color: var(--col-surface2);
 }
@@ -147,7 +148,7 @@ color: var(--col-on-primary);
 .custom-btn3:active {
   background-color: var(--col-s-700);
   border-color: var(--col-surface2);
-  color: var(--col-on-bg);
+  color: var(--col-on-surface);
 }
 /* .accordion-body {
   padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x);
@@ -194,7 +195,7 @@ color: var(--col-on-primary);
   color: var(--col-s-700);
 }
 .tob {
-  color: var(--col-on-bg);
+  color: var(--col-on-surface);
 }
 .tos {
   color: var(--col-on-surface);
@@ -271,7 +272,8 @@ color: var(--col-on-primary);
   --bs-accordion-active-color: var(--col-on-surface);
   --bs-accordion-active-bg: var(--col-surface2);
 }
-.btn-check:focus+.btn, .btn:focus {
+.btn-check:focus + .btn,
+.btn:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 109, 253, 0);
 }
@@ -288,7 +290,7 @@ color: var(--col-on-primary);
   border: 0;
   border-radius: 0;
   overflow-anchor: none;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,border-radius .15s ease;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
 }
 .accordion-button:focus {
   z-index: 3;
@@ -320,7 +322,7 @@ color: var(--col-on-primary);
 }
 .form-control:focus {
   color: var(--col-on-primary);
-  background-color: var(--col-on-bg);
+  background-color: var(--col-on-surface);
   border-color: var(--col-surface2);
   outline: 0;
   box-shadow: 0 0 0 0.125rem var(--col-p-200);
@@ -333,7 +335,7 @@ color: var(--col-on-primary);
   font-weight: 400;
   line-height: 1.5;
   color: var(--col-on-primary);
-  background-color: var(--col-on-bg);
+  background-color: var(--col-on-surface);
   background-clip: padding-box;
   border: 1px solid var(--col-surface2);
   -webkit-appearance: none;
@@ -418,6 +420,9 @@ section figure {
   color: var(--col-s-500);
   text-align: center;
 }
+#fontType {
+  color: var(--col-p-200);
+}
 .achOnes,
 .achTwos {
   color: var(--col-on-surface);
@@ -433,14 +438,18 @@ section figure {
   border: var(--line-2) solid var(--col-surface2);
   border-radius: var(--border-radius);
   overflow: hidden;
-  min-width: 13ch;
-}
-.paletteTop {
-  background-color: var(--col-bg);
+  min-width: 12ch;
 }
 .paletteTopName {
-  background-color: var(--col-surface2);
+  background-color: var(--col-surface);
   border-radius: var(--border-radius-form);
+  border: var(--line-2) solid var(--col-surface2);
+  max-width: 9ch;
+}
+.paletteTopName2 {
+  background-color: var(--col-surface);
+  border-radius: var(--border-radius-form);
+  max-width: 9ch;
 }
 .paletteTopName h6 {
   color: var(--col-on-surface);
@@ -451,4 +460,40 @@ section figure {
 .imageArea {
   border: var(--line-2) solid var(--col-surface2);
   border-radius: var(--border-radius);
+}
+#swatchBG {
+  background-color: var(--col-bg);
+}
+#swatchSurface {
+  background-color: var(--col-surface);
+}
+#swatchBorder {
+  background-color: var(--col-surface2);
+}
+#swatchP200 {
+  background-color: var(--col-p-200);
+}
+#swatchP500 {
+  background-color: var(--col-p-500);
+}
+#swatchP700 {
+  background-color: var(--col-p-700);
+}
+#swatchS200 {
+  background-color: var(--col-s-200);
+}
+#swatchS500 {
+  background-color: var(--col-s-500);
+}
+#swatchS700 {
+  background-color: var(--col-s-700);
+}
+#swatchToS {
+  background-color: var(--col-on-surface);
+}
+#swatchToP {
+  background-color: var(--col-on-primary);
+}
+#swatchToSec {
+  background-color: var(--col-on-secondary);
 }

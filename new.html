@@ -20,6 +20,7 @@
     <title>UI Style Guide</title>
   </head>
   <body>
+    <!-- Nav Bar -->
     <nav class="navbar navbar-expand-sm custom-nav sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><b>UI Style Guide</b></a>
@@ -31,7 +32,7 @@
           <form class="d-flex" id="randomize">
             <div class="dropdown mx-2">
               <button class="btn custom-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Color Palette</button>
-              
+
               <!-- Color Palette Dropdown Form -->
               <ul class="dropdown-menu">
                 <li class="dropdown-item">
@@ -72,7 +73,7 @@
         <div class="row">
           <!-- SIDE NAVIGATION -->
 
-          <div class="accordion accordion-flush col-12 col-sm-3 p-0 " id="accordionFlushExample">
+          <div class="accordion accordion-flush col-12 col-sm-3 p-0" id="accordionFlushExample">
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-headingOne">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"><b>Layout</b></button>
@@ -84,7 +85,7 @@
                       <label for="backgroundInput" class="form-label">Background</label>
                       <div class="input-group">
                         <span class="input-group-text" id="inputGroupPrepend"><i class="bii fa-solid fa-square"></i></span>
-                        <input type="text" class="form-control" id="backgroundInput" placeholder="#f5efc6" value="#f5efc6" />
+                        <input type="text" class="form-control" id="backgroundInput" placeholder="#254643" value="#254643" />
                       </div>
                     </div>
 
@@ -92,7 +93,7 @@
                       <label for="surfaceInput" class="form-label">Surface</label>
                       <div class="input-group">
                         <span class="input-group-text" id="inputGroupPrepend"><i class="sii fa-solid fa-clone"></i></span>
-                        <input type="text" class="form-control" id="surfaceInput" placeholder="#e7d76f" value="#e7d76f" />
+                        <input type="text" class="form-control" id="surfaceInput" placeholder="#316d69" value="#316d69" />
                       </div>
                     </div>
 
@@ -100,7 +101,7 @@
                       <label for="borderInput" class="form-label">Border</label>
                       <div class="input-group">
                         <span class="input-group-text2" id="inputGroupPrepend"><i class="boi fa-regular fa-square"></i></span>
-                        <input type="text" class="form-control" id="borderInput" placeholder="#dbca57" value="#dbca57" />
+                        <input type="text" class="form-control" id="borderInput" placeholder="#498884" value="#498884" />
                       </div>
                     </div>
                   </form>
@@ -114,6 +115,7 @@
               </h2>
               <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
+                  <form id="formPrimary">
                   <div class="mb-3">
                     <label for="p200Input" class="form-label">Primary 200</label>
                     <div class="input-group">
@@ -137,6 +139,7 @@
                       <input type="text" class="form-control" id="p700Input" placeholder="#dbca57" value="#dbca57" />
                     </div>
                   </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -147,11 +150,12 @@
               </h2>
               <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
+                  <form id="formSecondary">
                   <div class="mb-3">
                     <label for="s200Input" class="form-label">Secondary 200</label>
                     <div class="input-group">
                       <span class="input-group-text" id="inputGroupPrepend"><i class="s2 fa-solid fa-circle"></i></span>
-                      <input type="text" class="form-control" id="s200Input" placeholder="#f5efc6" value="#f5efc6" />
+                      <input type="text" class="form-control" id="s200Input" placeholder="#c6e6f5" value="#c6e6f5" />
                     </div>
                   </div>
 
@@ -159,7 +163,7 @@
                     <label for="s500Input" class="form-label">Secondary 500</label>
                     <div class="input-group">
                       <span class="input-group-text" id="inputGroupPrepend"><i class="s5 fa-solid fa-circle"></i></span>
-                      <input type="text" class="form-control" id="s500Input" placeholder="#e7d76f" value="#e7d76f" />
+                      <input type="text" class="form-control" id="s500Input" placeholder="#6fbfe7" value="#6fbfe7" />
                     </div>
                   </div>
 
@@ -167,9 +171,10 @@
                     <label for="s700Input" class="form-label">Secondary 700</label>
                     <div class="input-group">
                       <span class="input-group-text" id="inputGroupPrepend"><i class="s7 fa-solid fa-circle"></i></span>
-                      <input type="text" class="form-control" id="s700Input" placeholder="#dbca57" value="#dbca57" />
+                      <input type="text" class="form-control" id="s700Input" placeholder="#57afdb" value="#57afdb" />
                     </div>
                   </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -180,19 +185,13 @@
               </h2>
               <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-                  <div class="mb-3">
-                    <label for="onBackgroundInput" class="form-label">Text on Background</label>
-                    <div class="input-group">
-                      <span class="input-group-text" id="inputGroupPrepend"><i class="tob fa-solid fa-font"></i></span>
-                      <input type="text" class="form-control" id="onBackgroundInput" placeholder="#f5efc6" value="#f5efc6" />
-                    </div>
-                  </div>
+                  <form id="formText">
 
                   <div class="mb-3">
                     <label for="onSurfaceInput" class="form-label">Text on Surface</label>
                     <div class="input-group">
                       <span class="input-group-text" id="inputGroupPrepend"><i class="tos fa-solid fa-font"></i></span>
-                      <input type="text" class="form-control" id="onSurfaceInput" placeholder="#e7d76f" value="#e7d76f" />
+                      <input type="text" class="form-control" id="onSurfaceInput" placeholder="#cbd0e6" value="#cbd0e6" />
                     </div>
                   </div>
 
@@ -200,7 +199,7 @@
                     <label for="onPrimaryInput" class="form-label">Text on Primary</label>
                     <div class="input-group">
                       <span class="input-group-text" id="inputGroupPrepend"><i class="topp fa-solid fa-font"></i></span>
-                      <input type="text" class="form-control" id="onPrimaryInput" placeholder="#dbca57" value="#dbca57" />
+                      <input type="text" class="form-control" id="onPrimaryInput" placeholder="#1a1b26" value="#1a1b26" />
                     </div>
                   </div>
 
@@ -208,9 +207,10 @@
                     <label for="onSecondaryInput" class="form-label">Text on Secondary</label>
                     <div class="input-group">
                       <span class="input-group-text" id="inputGroupPrepend"><i class="to2 fa-solid fa-font"></i></span>
-                      <input type="text" class="form-control" id="onSecondaryInput" placeholder="#e7d76f" value="#e7d76f" />
+                      <input type="text" class="form-control" id="onSecondaryInput" placeholder="#1a1b26" value="#1a1b26" />
                     </div>
                   </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -222,7 +222,7 @@
               <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
                 <h5 class="text-center pt-3 mb-0">Google Fonts</h5>
 
-                <div  role="group" aria-label="Vertical radio toggle button group">
+                <div role="group" aria-label="Vertical radio toggle button group">
                   <form id="formFonts" class="btn-group-vertical d-flex justify-content-center m-4">
                     <input type="radio" class="btn-check" name="vbtn-radio" id="nunito" value="nunito" autocomplete="off" checked />
                     <label class="btn custom-btn3" for="nunito">Nunito</label>
@@ -354,18 +354,17 @@
 
             <div class="color-row col-12 text-center">
               <!-- Color Section -->
-              <!-- <h2>Color Area</h2> -->
               <div class="container-xl">
                 <div class="row">
-                  <div class="col-12 col-lg-6">
+                  <div class="col-12 col-lg-6 pb-3">
                     <!-- Palette -->
                     <h2 class="pt-3 titleH2">Palette</h2>
                     <section class="paletteArea d-flex flex-wrap justify-content-evenly p-3">
-
+                      <!-- Palette Item -->
                       <div class="paletteItem col m-2">
-                        <div class="paletteTop px-3 py-5">
-                          <div class="paletteTopName">
-                            <h6 id="" class="p-1 m-0 user-select-all"><b>#1C1C1C</b></h6>
+                        <div class="paletteTop px-3 py-5" id="swatchBG">
+                          <div class="paletteTopName mx-auto">
+                            <h6 id="bgText" class="p-1 m-0 user-select-all"><b>#254643</b></h6>
                           </div>
                         </div>
                         <div class="paletteBottom">
@@ -373,37 +372,143 @@
                         </div>
                       </div>
 
+                      <!-- Palette Item -->
                       <div class="paletteItem col m-2">
-                        <div class="paletteTop px-3 py-5">
-                          <div class="paletteTopName">
-                            <h6 id="" class="p-1 m-0 user-select-all"><b>#1C1C1C</b></h6>
+                        <div class="paletteTop px-3 py-5" id="swatchSurface">
+                          <div class="paletteTopName mx-auto">
+                            <h6 id="surfText" class="p-1 m-0 user-select-all"><b>#316d69</b></h6>
                           </div>
                         </div>
                         <div class="paletteBottom">
-                          <h6 class="m-0 py-2 user-select-none"><b>Background</b></h6>
+                          <h6 class="m-0 py-2 user-select-none"><b>Surface</b></h6>
                         </div>
                       </div>
 
+                      <!-- Palette Item -->
                       <div class="paletteItem col m-2">
-                        <div class="paletteTop px-3 py-5">
-                          <div class="paletteTopName">
-                            <h6 id="" class="p-1 m-0 user-select-all"><b>#1C1C1C</b></h6>
+                        <div class="paletteTop px-3 py-5" id="swatchBorder">
+                          <div class="paletteTopName2 mx-auto">
+                            <h6 id="borText" class="p-1 m-0 user-select-all"><b>#498884</b></h6>
                           </div>
                         </div>
                         <div class="paletteBottom">
-                          <h6 class="m-0 py-2 user-select-none"><b>Background</b></h6>
+                          <h6 class="m-0 py-2 user-select-none"><b>Border</b></h6>
                         </div>
                       </div>
 
+                      <!-- Palette Item -->
+                      <div class="paletteItem col m-2">
+                        <div class="paletteTop px-3 py-5" id="swatchP200">
+                          <div class="paletteTopName mx-auto">
+                            <h6 id="p200Text" class="p-1 m-0 user-select-all"><b>#f5efc6</b></h6>
+                          </div>
+                        </div>
+                        <div class="paletteBottom">
+                          <h6 class="m-0 py-2 user-select-none"><b>Primary 200</b></h6>
+                        </div>
+                      </div>
+
+                      <!-- Palette Item -->
+                      <div class="paletteItem col m-2">
+                        <div class="paletteTop px-3 py-5" id="swatchP500">
+                          <div class="paletteTopName mx-auto">
+                            <h6 id="p500Text" class="p-1 m-0 user-select-all"><b>#e7d76f</b></h6>
+                          </div>
+                        </div>
+                        <div class="paletteBottom">
+                          <h6 class="m-0 py-2 user-select-none"><b>Primary 500</b></h6>
+                        </div>
+                      </div>
+
+                      <!-- Palette Item -->
+                      <div class="paletteItem col m-2">
+                        <div class="paletteTop px-3 py-5" id="swatchP700">
+                          <div class="paletteTopName mx-auto">
+                            <h6 id="p700Text" class="p-1 m-0 user-select-all"><b>#dbca57</b></h6>
+                          </div>
+                        </div>
+                        <div class="paletteBottom">
+                          <h6 class="m-0 py-2 user-select-none"><b>Primary 700</b></h6>
+                        </div>
+                      </div>
+
+                      <!-- Palette Item -->
+                      <div class="paletteItem col m-2">
+                        <div class="paletteTop px-3 py-5" id="swatchS200">
+                          <div class="paletteTopName mx-auto">
+                            <h6 id="s200Text" class="p-1 m-0 user-select-all"><b>#c6e6f5</b></h6>
+                          </div>
+                        </div>
+                        <div class="paletteBottom">
+                          <h6 class="m-0 py-2 user-select-none"><b>Secondary 200</b></h6>
+                        </div>
+                      </div>
+
+                      <!-- Palette Item -->
+                      <div class="paletteItem col m-2">
+                        <div class="paletteTop px-3 py-5" id="swatchS500">
+                          <div class="paletteTopName mx-auto">
+                            <h6 id="s500Text" class="p-1 m-0 user-select-all"><b>#6fbfe7</b></h6>
+                          </div>
+                        </div>
+                        <div class="paletteBottom">
+                          <h6 class="m-0 py-2 user-select-none"><b>Secondary 500</b></h6>
+                        </div>
+                      </div>
+
+                      <!-- Palette Item -->
+                      <div class="paletteItem col m-2">
+                        <div class="paletteTop px-3 py-5" id="swatchS700">
+                          <div class="paletteTopName mx-auto">
+                            <h6 id="s700Text" class="p-1 m-0 user-select-all"><b>#57afdb</b></h6>
+                          </div>
+                        </div>
+                        <div class="paletteBottom">
+                          <h6 class="m-0 py-2 user-select-none"><b>Secondary 700</b></h6>
+                        </div>
+                      </div>
+
+                      <!-- Palette Item -->
+                      <div class="paletteItem col m-2">
+                        <div class="paletteTop px-3 py-5" id="swatchToS">
+                          <div class="paletteTopName mx-auto">
+                            <h6 id="onStext" class="p-1 m-0 user-select-all"><b>#cbd0e6</b></h6>
+                          </div>
+                        </div>
+                        <div class="paletteBottom">
+                          <h6 class="m-0 py-2 user-select-none"><b>Text on Surface</b></h6>
+                        </div>
+                      </div>
+
+                      <!-- Palette Item -->
+                      <div class="paletteItem col m-2">
+                        <div class="paletteTop px-3 py-5" id="swatchToP">
+                          <div class="paletteTopName mx-auto">
+                            <h6 id="onPtext" class="p-1 m-0 user-select-all"><b>#1a1b26</b></h6>
+                          </div>
+                        </div>
+                        <div class="paletteBottom">
+                          <h6 class="m-0 py-2 user-select-none"><b>Text on Primary</b></h6>
+                        </div>
+                      </div>
+
+                      <!-- Palette Item -->
+                      <div class="paletteItem col m-2">
+                        <div class="paletteTop px-3 py-5" id="swatchToSec">
+                          <div class="paletteTopName mx-auto">
+                            <h6 id="onSecText" class="p-1 m-0 user-select-all"><b>#1a1b26</b></h6>
+                          </div>
+                        </div>
+                        <div class="paletteBottom">
+                          <h6 class="m-0 py-2 user-select-none"><b>Text on Secondary</b></h6>
+                        </div>
+                      </div>
                     </section>
-                    
                   </div>
                   <div class="col-12 col-lg-6">
                     <!-- Image section -->
                     <h3>Image Area</h3>
-                    <section class="imageArea d-flex flex-wrap justify-content-evenly">
-
-                    </section>
+                    <section class="imageArea d-flex flex-wrap justify-content-evenly"></section>
                   </div>
                 </div>
               </div>
