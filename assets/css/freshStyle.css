@@ -368,6 +368,7 @@ color: var(--col-on-primary);
 }
 .corner {
   background-color: var(--col-surface2);
+  border-bottom-left-radius: var(--border-radius-form);
   overflow: hidden;
 }
 figure h6 {
@@ -423,4 +424,31 @@ section figure {
 }
 .titleH2 {
   color: var(--col-p-500);
+}
+.paletteArea {
+  border: var(--line-2) solid var(--col-surface2);
+  border-radius: var(--border-radius);
+}
+.paletteItem {
+  border: var(--line-2) solid var(--col-surface2);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  min-width: 13ch;
+}
+.paletteTop {
+  background-color: var(--col-bg);
+}
+.paletteTopName {
+  background-color: var(--col-surface2);
+  border-radius: var(--border-radius-form);
+}
+.paletteTopName h6 {
+  color: var(--col-on-surface);
+}
+.paletteBottom {
+  border-top: var(--line-2) solid var(--col-surface2);
+}
+.imageArea {
+  border: var(--line-2) solid var(--col-surface2);
+  border-radius: var(--border-radius);
 }
