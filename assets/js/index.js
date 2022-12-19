@@ -193,16 +193,28 @@ function generateColor(colorSchemeConfirm) {
   console.log('Surface Color: ' + surfaceCol);
 
   // Make darker and lighter version
-  primaryLight = tinycolor(primaryColConfirm).desaturate(20).lighten(15).toHexString();
-  primaryDark = tinycolor(primaryColConfirm).desaturate(2).darken(18).toHexString();
-  const secondaryLight = tinycolor(secondaryCol).desaturate(20).lighten(15).toHexString();
-  const secondaryDark = tinycolor(secondaryCol).desaturate(2).darken(18).toHexString();
+  primaryLight = tinycolor(primaryColConfirm).spin(-8).desaturate(20).lighten(15).toHexString();
+  primaryDark = tinycolor(primaryColConfirm).spin(8).desaturate(2).darken(18).toHexString();
+  const secondaryLight = tinycolor(secondaryCol).spin(-8).desaturate(20).lighten(15).toHexString();
+  const secondaryDark = tinycolor(secondaryCol).spin(8).desaturate(2).darken(18).toHexString();
   surfaceCol = tinycolor(surfaceCol).desaturate(40).darken(30).toHexString();
-  const backgroundCol = tinycolor(surfaceCol).darken(10).toHexString();
+  let backgroundCol = tinycolor(surfaceCol).darken(10).toHexString();
+
+  if (backgroundCol === '#000000') {
+    backgroundCol = '#1c1c1c';
+  }
   const borderCol = tinycolor(surfaceCol).lighten(15).toHexString();
 
+  let onSurface = tinycolor(primaryColConfirm).spin(-16).desaturate(50).lighten(30).toHexString();
+  let onPrimary = tinycolor(surfaceCol).spin(16).desaturate(30).darken(30).toHexString();
+  if (onPrimary === '#000000') {
+    onPrimary = '#1a1a1a';
+  }
+  if (onSurface === '#ffffff') {
+    onSurface = '#f0f0f0';
+  }
   const p500vsSurface = tinycolor.readability(surfaceCol, primaryColConfirm);
-  console.log("Primary 500 v Surface Contrast Ratio: ", p500vsSurface);
+  console.log('Primary 500 v Surface Contrast Ratio: ', p500vsSurface);
 
   rootTheme.style.setProperty('--col-bg', backgroundCol);
   rootTheme.style.setProperty('--col-surface', surfaceCol);
@@ -214,9 +226,9 @@ function generateColor(colorSchemeConfirm) {
   rootTheme.style.setProperty('--col-s-500', secondaryCol);
   rootTheme.style.setProperty('--col-s-700', secondaryDark);
 
-  // rootTheme.style.setProperty("--col-on-surface", onSurface);
-  // rootTheme.style.setProperty("--col-on-primary", onPrimary);
-  // rootTheme.style.setProperty("--col-on-secondary", onSecondary);
+  rootTheme.style.setProperty('--col-on-surface', onSurface);
+  rootTheme.style.setProperty('--col-on-primary', onPrimary);
+  rootTheme.style.setProperty('--col-on-secondary', onPrimary);
 
   p200Text.innerText = primaryLight;
   p500Text.innerText = primaryColConfirm;
@@ -228,9 +240,9 @@ function generateColor(colorSchemeConfirm) {
   surfaceText.innerText = surfaceCol;
   borderText.innerText = borderCol;
 
-  // onSurfaceText.innerText = onSurface;
-  // onPrimaryText.innerText = onPrimary;
-  // onSecondaryText.innerText = onSecondary;
+  onSurfaceText.innerText = onSurface;
+  onPrimaryText.innerText = onPrimary;
+  onSecondaryText.innerText = onPrimary;
   backgroundInput.value = backgroundCol;
   borderInput.value = borderCol;
   p200Input.value = primaryLight;
