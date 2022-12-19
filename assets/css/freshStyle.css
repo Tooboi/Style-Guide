@@ -529,11 +529,44 @@ section figure {
 .imageBG {
   position: relative;
   width: 100%;
-  padding-top: 100%;
+  max-width: 40ch;
+  aspect-ratio: 1 / 1;
+  /* padding-top: 50%; */
   border: var(--line-2) solid var(--col-surface2);
   border-radius: var(--border-radius);
   background: repeating-radial-gradient(circle, transparent, transparent 11.2px, var(--col-p-700) 11.2px, var(--col-p-700) 14.4px) 0% 0% / 100% 64px, repeating-radial-gradient(circle, transparent, transparent 11.2px, var(--col-s-500) 11.2px, var(--col-s-500) 14.4px) 32px 32px,
     64px 32px var(--col-surface);
-  background-position: 0% 0%, 50% 50%, 100% 50%;
+    background-position: 0% 0%, 50% 50%, 50% 100%;
+    transition: 400ms cubic-bezier(.31,.84,.65,1);
 }
-
+.imageBG:hover {
+  background-position: 15% -15%, 50% 50%, 50% 50%;
+}
+.accessItem {
+  background-color: var(--col-surface);
+  color: var(--col-on-surface);
+}
+.accessItem2 {
+  background-color: var(--col-surface);
+  color: var(--col-p-500);
+}
+.accessItem3 {
+  background-color: var(--col-surface);
+  color: var(--col-s-500);
+}
+.accessItem4 {
+  background-color: var(--col-p-500);
+  color: var(--col-on-primary);
+}
+.accessItem5 {
+  background-color: var(--col-s-500);
+  color: var(--col-on-secondary);
+}
+.accessItem,
+.accessItem2,
+.accessItem3,
+.accessItem4,
+.accessItem5 {
+  border-radius: var(--border-radius);
+  border: var(--line-2) solid var(--col-surface2);
+}
