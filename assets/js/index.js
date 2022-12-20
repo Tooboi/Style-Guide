@@ -48,6 +48,27 @@ const onSurfaceText = document.getElementById('onStext');
 const onPrimaryText = document.getElementById('onPtext');
 const onSecondaryText = document.getElementById('onSecText');
 
+// Contrast Ratio Text
+const onSurfLCR = document.getElementById('onSurfLCR');
+const onSurfSCR = document.getElementById('onSurfSCR');
+const onSurfSRatio = document.getElementById('onSurfSRatio');
+
+const pOnSurfLCR = document.getElementById('pOnSurfLCR');
+const pOnSurfSCR = document.getElementById('pOnSurfSCR');
+const pOnSurfSRatio = document.getElementById('pOnSurfSRatio');
+
+const sOnSurfLCR = document.getElementById('sOnSurfLCR');
+const sOnSurfSCR = document.getElementById('sOnSurfSCR');
+const sOnSurfSRatio = document.getElementById('sOnSurfSRatio');
+
+const OnPrimeLCR = document.getElementById('OnPrimeLCR');
+const OnPrimeSCR = document.getElementById('OnPrimeSCR');
+const OnPrimeSRatio = document.getElementById('OnPrimeSRatio');
+
+const OnSecLCR = document.getElementById('OnSecLCR');
+const OnSecSCR = document.getElementById('OnSecSCR');
+const OnSecSRatio = document.getElementById('OnSecSRatio');
+
 // Font inputs
 // const crimsonPro = document.getElementById("crimsonPro");
 const fraunces = document.getElementById('fraunces');
@@ -213,8 +234,26 @@ function generateColor(colorSchemeConfirm) {
   if (onSurface === '#ffffff') {
     onSurface = '#f0f0f0';
   }
-  const p500vsSurface = tinycolor.readability(surfaceCol, primaryColConfirm);
+  // Contrast Ratio
+  const p500vsSurface = tinycolor.readability(surfaceCol, primaryColConfirm).toFixed(2);
   console.log('Primary 500 v Surface Contrast Ratio: ', p500vsSurface);
+  pOnSurfSRatio.innerText = p500vsSurface + " : 1"
+
+  const s500vsSurface = tinycolor.readability(surfaceCol, secondaryCol).toFixed(2);
+  console.log('Secondary 500 v Surface Contrast Ratio: ', s500vsSurface);
+  sOnSurfSRatio.innerText = s500vsSurface + " : 1"
+
+  const surfvsSurface = tinycolor.readability(surfaceCol, onSurface).toFixed(2);
+  console.log('Surface v Surface Contrast Ratio: ', surfvsSurface);
+  onSurfSRatio.innerText = surfvsSurface + " : 1"
+
+  const primvsOnPrime = tinycolor.readability(primaryColConfirm, onPrimary).toFixed(2);
+  console.log('Text on Primary v Primary Contrast Ratio: ', primvsOnPrime);
+  OnPrimeSRatio.innerText = primvsOnPrime + " : 1"
+
+  const secvsOnPrime = tinycolor.readability(secondaryCol, onPrimary).toFixed(2);
+  console.log('Text on Secondary v Secondary Contrast Ratio: ', secvsOnPrime);
+  OnSecSRatio.innerText = secvsOnPrime + " : 1"
 
   rootTheme.style.setProperty('--col-bg', backgroundCol);
   rootTheme.style.setProperty('--col-surface', surfaceCol);
@@ -283,3 +322,4 @@ formFonts.addEventListener('change', (event) => {
     }
   }
 });
+
