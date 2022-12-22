@@ -89,6 +89,9 @@ formLayout.addEventListener("input", () => {
   const background = backgroundInput.value;
   const surface = surfaceInput.value;
   const border = borderInput.value;
+  const p500 = p500Input.value;
+  const s500 = s500Input.value;
+  const onSurface = onSurfaceInput.value;
 
   rootTheme.style.setProperty("--col-bg", background);
   rootTheme.style.setProperty("--col-surface", surface);
@@ -97,13 +100,56 @@ formLayout.addEventListener("input", () => {
   backgroundText.innerText = background;
   surfaceText.innerText = surface;
   borderText.innerText = border;
+  
+  const p500vsSurface = tinycolor.readability(surface, p500).toFixed(2);
+  console.log("Primary 500 v Surface Contrast Ratio: ", p500vsSurface);
+  pOnSurfSRatio.innerText = p500vsSurface + " : 1";
+  if (tinycolor.isReadable(surface, p500, { level: "AA", size: "large" })) {
+    pOnSurfLCR.classList = "pass text-success px-1 fa-regular fa-circle-check";
+  } else {
+    pOnSurfLCR.classList = "fail px-1 text-danger fa-regular fa-circle-xmark";
+  }
+  if (tinycolor.isReadable(surface, p500, { level: "AA", size: "small" })) {
+    pOnSurfSCR.classList = "pass text-success px-1 fa-regular fa-circle-check";
+  } else {
+    pOnSurfSCR.classList = "fail px-1 text-danger fa-regular fa-circle-xmark";
+  }
+
+  const s500vsSurface = tinycolor.readability(surface, s500).toFixed(2);
+  console.log("Secondary 500 v Surface Contrast Ratio: ", s500vsSurface);
+  sOnSurfSRatio.innerText = s500vsSurface + " : 1";
+  if (tinycolor.isReadable(surface, s500, { level: "AA", size: "large" })) {
+    sOnSurfLCR.classList = "pass text-success px-1 fa-regular fa-circle-check";
+  } else {
+    sOnSurfLCR.classList = "fail px-1 text-danger fa-regular fa-circle-xmark";
+  }
+  if (tinycolor.isReadable(surface, s500, { level: "AA", size: "small" })) {
+    sOnSurfSCR.classList = "pass text-success px-1 fa-regular fa-circle-check";
+  } else {
+    sOnSurfSCR.classList = "fail px-1 text-danger fa-regular fa-circle-xmark";
+  }
+
+  const surfvsSurface = tinycolor.readability(surface, onSurface).toFixed(2);
+  console.log("Surface v Surface Contrast Ratio: ", surfvsSurface);
+  onSurfSRatio.innerText = surfvsSurface + " : 1";
+  if (tinycolor.isReadable(surface, onSurface, { level: "AA", size: "large" })) {
+    onSurfLCR.classList = "pass text-success px-1 fa-regular fa-circle-check";
+  } else {
+    onSurfLCR.classList = "fail px-1 text-danger fa-regular fa-circle-xmark";
+  }
+  if (tinycolor.isReadable(surface, onSurface, { level: "AA", size: "small" })) {
+    onSurfSCR.classList = "pass text-success px-1 fa-regular fa-circle-check";
+  } else {
+    onSurfSCR.classList = "fail px-1 text-danger fa-regular fa-circle-xmark";
+  }
 });
 
 formPrimary.addEventListener("input", () => {
   const p200 = p200Input.value;
   const p500 = p500Input.value;
   const p700 = p700Input.value;
-
+  const surface = surfaceInput.value;
+  const onPrimary = onPrimaryInput.value;
   rootTheme.style.setProperty("--col-p-200", p200);
   rootTheme.style.setProperty("--col-p-500", p500);
   rootTheme.style.setProperty("--col-p-700", p700);
@@ -111,13 +157,43 @@ formPrimary.addEventListener("input", () => {
   p200Text.innerText = p200;
   p500Text.innerText = p500;
   p700Text.innerText = p700;
+  
+  const p500vsSurface = tinycolor.readability(surface, p500).toFixed(2);
+  console.log("Primary 500 v Surface Contrast Ratio: ", p500vsSurface);
+  pOnSurfSRatio.innerText = p500vsSurface + " : 1";
+  if (tinycolor.isReadable(surface, p500, { level: "AA", size: "large" })) {
+    pOnSurfLCR.classList = "pass text-success px-1 fa-regular fa-circle-check";
+  } else {
+    pOnSurfLCR.classList = "fail px-1 text-danger fa-regular fa-circle-xmark";
+  }
+  if (tinycolor.isReadable(surface, p500, { level: "AA", size: "small" })) {
+    pOnSurfSCR.classList = "pass text-success px-1 fa-regular fa-circle-check";
+  } else {
+    pOnSurfSCR.classList = "fail px-1 text-danger fa-regular fa-circle-xmark";
+  }
+
+  const primvsOnPrime = tinycolor.readability(p500, onPrimary).toFixed(2);
+  console.log("Text on Primary v Primary Contrast Ratio: ", primvsOnPrime);
+  OnPrimeSRatio.innerText = primvsOnPrime + " : 1";
+  if (tinycolor.isReadable(p500, onPrimary, { level: "AA", size: "large" })) {
+    OnPrimeLCR.classList = "pass text-success px-1 fa-regular fa-circle-check";
+  } else {
+    OnPrimeLCR.classList = "fail px-1 text-danger fa-regular fa-circle-xmark";
+  }
+  if (tinycolor.isReadable(p500, onPrimary, { level: "AA", size: "small" })) {
+    OnPrimeSCR.classList = "pass text-success px-1 fa-regular fa-circle-check";
+  } else {
+    OnPrimeSCR.classList = "fail px-1 text-danger fa-regular fa-circle-xmark";
+  }
+
 });
 
 formSecondary.addEventListener("input", () => {
   const s200 = s200Input.value;
   const s500 = s500Input.value;
   const s700 = s700Input.value;
-
+  const surface = surfaceInput.value;
+  const onSecTxt = onSecondaryInput.value;
   rootTheme.style.setProperty("--col-s-200", s200);
   rootTheme.style.setProperty("--col-s-500", s500);
   rootTheme.style.setProperty("--col-s-700", s700);
@@ -125,13 +201,44 @@ formSecondary.addEventListener("input", () => {
   s200Text.innerText = s200;
   s500Text.innerText = s500;
   s700Text.innerText = s700;
+
+  const s500vsSurface = tinycolor.readability(surface, s500).toFixed(2);
+  console.log("Secondary 500 v Surface Contrast Ratio: ", s500vsSurface);
+  sOnSurfSRatio.innerText = s500vsSurface + " : 1";
+  if (tinycolor.isReadable(surface, s500, { level: "AA", size: "large" })) {
+    sOnSurfLCR.classList = "pass text-success px-1 fa-regular fa-circle-check";
+  } else {
+    sOnSurfLCR.classList = "fail px-1 text-danger fa-regular fa-circle-xmark";
+  }
+  if (tinycolor.isReadable(surface, s500, { level: "AA", size: "small" })) {
+    sOnSurfSCR.classList = "pass text-success px-1 fa-regular fa-circle-check";
+  } else {
+    sOnSurfSCR.classList = "fail px-1 text-danger fa-regular fa-circle-xmark";
+  }
+
+  const secvsOnPrime = tinycolor.readability(s500, onSecTxt).toFixed(2);
+  console.log("Text on Secondary v Secondary Contrast Ratio: ", secvsOnPrime);
+  OnSecSRatio.innerText = secvsOnPrime + " : 1";
+  if (tinycolor.isReadable(s500, onSecTxt, { level: "AA", size: "large" })) {
+    OnSecLCR.classList = "pass text-success px-1 fa-regular fa-circle-check";
+  } else {
+    OnSecLCR.classList = "fail px-1 text-danger fa-regular fa-circle-xmark";
+  }
+  if (tinycolor.isReadable(s500, onSecTxt, { level: "AA", size: "small" })) {
+    OnSecSCR.classList = "pass text-success px-1 fa-regular fa-circle-check";
+  } else {
+    OnSecSCR.classList = "fail px-1 text-danger fa-regular fa-circle-xmark";
+  }
+
 });
 
 formText.addEventListener("input", () => {
   const onSurface = onSurfaceInput.value;
   const onPrimary = onPrimaryInput.value;
   const onSecondary = onSecondaryInput.value;
-
+  const s500 = s500Input.value;
+  const p500 = p500Input.value;
+  
   rootTheme.style.setProperty("--col-on-surface", onSurface);
   rootTheme.style.setProperty("--col-on-primary", onPrimary);
   rootTheme.style.setProperty("--col-on-secondary", onSecondary);
@@ -139,6 +246,34 @@ formText.addEventListener("input", () => {
   onSurfaceText.innerText = onSurface;
   onPrimaryText.innerText = onPrimary;
   onSecondaryText.innerText = onSecondary;
+
+  const secvsOnPrime = tinycolor.readability(s500, onSecondary).toFixed(2);
+  console.log("Text on Secondary v Secondary Contrast Ratio: ", secvsOnPrime);
+  OnSecSRatio.innerText = secvsOnPrime + " : 1";
+  if (tinycolor.isReadable(s500, onSecondary, { level: "AA", size: "large" })) {
+    OnSecLCR.classList = "pass text-success px-1 fa-regular fa-circle-check";
+  } else {
+    OnSecLCR.classList = "fail px-1 text-danger fa-regular fa-circle-xmark";
+  }
+  if (tinycolor.isReadable(s500, onSecondary, { level: "AA", size: "small" })) {
+    OnSecSCR.classList = "pass text-success px-1 fa-regular fa-circle-check";
+  } else {
+    OnSecSCR.classList = "fail px-1 text-danger fa-regular fa-circle-xmark";
+  }
+
+  const primvsOnPrime = tinycolor.readability(p500, onPrimary).toFixed(2);
+  console.log("Text on Primary v Primary Contrast Ratio: ", primvsOnPrime);
+  OnPrimeSRatio.innerText = primvsOnPrime + " : 1";
+  if (tinycolor.isReadable(p500, onPrimary, { level: "AA", size: "large" })) {
+    OnPrimeLCR.classList = "pass text-success px-1 fa-regular fa-circle-check";
+  } else {
+    OnPrimeLCR.classList = "fail px-1 text-danger fa-regular fa-circle-xmark";
+  }
+  if (tinycolor.isReadable(p500, onPrimary, { level: "AA", size: "small" })) {
+    OnPrimeSCR.classList = "pass text-success px-1 fa-regular fa-circle-check";
+  } else {
+    OnPrimeSCR.classList = "fail px-1 text-danger fa-regular fa-circle-xmark";
+  }
 });
 
 var primaryCol = "";
@@ -233,9 +368,7 @@ function generateColor(colorSchemeConfirm) {
   if (onSurface === "#ffffff") {
     onSurface = "#f0f0f0";
   }
-  //   tinycolor.isReadable("#000", "#111", {}); // false
-  // tinycolor.isReadable("#ff0088", "#5c1a72",{level:"AA",size:"small"}); //false
-  // tinycolor.isReadable("#ff0088", "#5c1a72",{level:"AA",size:"large"}), //true
+
   // Contrast Ratio
   const p500vsSurface = tinycolor.readability(surfaceCol, primaryColConfirm).toFixed(2);
   console.log("Primary 500 v Surface Contrast Ratio: ", p500vsSurface);

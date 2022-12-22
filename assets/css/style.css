@@ -558,3 +558,8 @@ color: var();
 .bb {
   border-bottom: var(--line-2) solid var(--col-surface2);
 }
+.make-me-sticky {
+  position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+  }
